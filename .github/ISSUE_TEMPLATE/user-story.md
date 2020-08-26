@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-## Value statement - a requirement, not a solution
+## Value statement 
 As a **(role)** 
 I need **(an action)** 
 so that **(a benefit)** 
@@ -20,5 +20,5 @@ so that **(a benefit)**
 ## Tasks
 - [ ] (todos for the team)
 
-## Size
+## Complexity
 (small, medium, large)
