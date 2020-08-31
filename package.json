@@ -44,7 +44,9 @@
     "@storybook/node-logger": "^6.0.20",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.20",
+    "@testing-library/dom": "^7.23.0",
     "babel-loader": "^8.1.0",
+    "prettier": "2.1.1",
     "react-is": "^16.13.1"
   }
 }
