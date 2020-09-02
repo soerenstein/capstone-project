@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
-export default function CreateContact( onSubmit ) {
+export default function CreateContact() {
 
     const [formData, setFormData] = useState('')
     const [disabledButton, setDisabledButton] = useState(true)
+  
     return (
         <div>
             <FormStyled onSubmit={handleSubmit}>
@@ -14,6 +15,7 @@ export default function CreateContact( onSubmit ) {
                     <input 
                     autoFocus
                     name="firstName"
+                    id="firstName"
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="Max"
@@ -23,6 +25,7 @@ export default function CreateContact( onSubmit ) {
                     Nachname
                     <input 
                     name="lastName"
+                    id="lastName"
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Mustermann"
@@ -33,6 +36,8 @@ export default function CreateContact( onSubmit ) {
                     Unternehmen
                     <input 
                     name="company"
+                    id="company"
+                    type="text"
                     onChange={handleChange}
                     placeholder="Universal GmbH"
                     />  
@@ -41,28 +46,38 @@ export default function CreateContact( onSubmit ) {
                     Telefon
                     <input 
                     name="phone"
+                    type="tel"
+                    id="phone"
                     />  
                 </LabelStyled>
                 <LabelStyled>
                     E-Mail
                     <input 
                     name="mail"
+                    type="email"
+                    id="mail"
                     />  
                 </LabelStyled>
             
                 <LabelStyled>
                     Adresse
                     <input 
-                    name="company"
+                    name="street"
+                    type="text"
+                    id="street"
                     placeholder="Straße"
                     />  
             <LabelWrapper>
                     <input 
                     name="zip"
+                    type="number"
+                    id="zip"
                     placeholder="PLZ"
                     />  
                     <input 
-                    name="company"
+                    name="city"
+                    type="text"
+                    id="city"
                     placeholder="Stadt"
                     />  
             </LabelWrapper> 
@@ -71,17 +86,22 @@ export default function CreateContact( onSubmit ) {
                     Notiz
                     <input 
                     name="note"
+                    type="text"
+                    id="note"
                     />  
                 </LabelStyled>
                 <LabelStyled>
                     Kategorie
                     <input 
                     name="category"
+                    type="text"
+                    id="category"
                     placeholder="Kunde, Dienstleister"
                     />  
                 </LabelStyled>
                 <SubmitButton disabled={disabledButton}>Kontakt hinzufügen</SubmitButton>
             </FormStyled>
+
         </div>
     )
 
@@ -92,12 +112,27 @@ export default function CreateContact( onSubmit ) {
     function handleSubmit(event) {
         event.preventDefault()
         const form = event.target
+        const contact = [
+        {Vorname: form.firstName.value,
+        Nachname: form.lastName.value,
+        Firma: form.company.value, 
+        Tel: form.phone.value, 
+        Mail: form.mail.value, 
+        Straße: form.street.value, 
+        ZIP: form.zip.value, 
+        Stadt: form.city.value,
+        Notiz: form.note.value,
+        Kategorie: form.category.value}
+        ]
+        console.log(contact)
         setFormData('')
         setDisabledButton(true)
         form.reset()
         form[0] && form[0].focus()
+
     }      
 }
+
 
 const FormStyled = styled.form`
   display: grid;
