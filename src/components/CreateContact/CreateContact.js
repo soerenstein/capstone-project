@@ -57,7 +57,7 @@ export default function CreateContact() {
             
                 <LabelStyled>
                     Adresse
-                    <input 
+                    <input  
                     name="street"
                     type="text"
                     placeholder="Straße"
