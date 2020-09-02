@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
-export default function CreateContact( onSubmit ) {
+export default function CreateContact() {
 
     const [formData, setFormData] = useState('')
     const [disabledButton, setDisabledButton] = useState(true)
@@ -14,6 +14,7 @@ export default function CreateContact( onSubmit ) {
                     <input 
                     autoFocus
                     name="firstName"
+                    type="text"
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="Max"
@@ -23,6 +24,7 @@ export default function CreateContact( onSubmit ) {
                     Nachname
                     <input 
                     name="lastName"
+                    type="text"
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Mustermann"
@@ -33,6 +35,7 @@ export default function CreateContact( onSubmit ) {
                     Unternehmen
                     <input 
                     name="company"
+                    type="text"
                     onChange={handleChange}
                     placeholder="Universal GmbH"
                     />  
@@ -41,19 +44,22 @@ export default function CreateContact( onSubmit ) {
                     Telefon
                     <input 
                     name="phone"
+                    type="tel"
                     />  
                 </LabelStyled>
                 <LabelStyled>
                     E-Mail
                     <input 
                     name="mail"
+                    type="email
                     />  
                 </LabelStyled>
             
                 <LabelStyled>
                     Adresse
                     <input 
-                    name="company"
+                    name="street"
+                    type="text"
                     placeholder="Straße"
                     />  
             <LabelWrapper>
@@ -71,12 +77,14 @@ export default function CreateContact( onSubmit ) {
                     Notiz
                     <input 
                     name="note"
+                    type="text"
                     />  
                 </LabelStyled>
                 <LabelStyled>
                     Kategorie
                     <input 
                     name="category"
+                    type="text"
                     placeholder="Kunde, Dienstleister"
                     />  
                 </LabelStyled>
