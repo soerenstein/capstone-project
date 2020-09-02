@@ -16,6 +16,7 @@ export default function CreateContact() {
                     autoFocus
                     name="firstName"
                     id="firstName"
+                    type="text"
                     value={formData.firstName}
                     onChange={handleChange}
                     placeholder="Max"
@@ -26,6 +27,7 @@ export default function CreateContact() {
                     <input 
                     name="lastName"
                     id="lastName"
+                    type="text"
                     value={formData.lastName}
                     onChange={handleChange}
                     placeholder="Mustermann"
@@ -62,7 +64,7 @@ export default function CreateContact() {
                 <LabelStyled>
                     Adresse
                     <input 
-                    name="street"
+                    name="zip"
                     type="text"
                     id="street"
                     placeholder="Straße"
