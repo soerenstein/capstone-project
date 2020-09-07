@@ -14,4 +14,4 @@ ProfilePage.args = {}
 
 const Content = () => <CardWrapper />
 
-export const ContentItem = Content.bind({})
+export const ContentWrapper = Content.bind({})
