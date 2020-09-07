@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-export default function CreateContact() {
-  const [contacts, setContacts] = useState([])
+export default function CreateContact({ onSubmit }) {
   const [disabledButton, setDisabledButton] = useState(true)
 
   return (
@@ -17,7 +16,7 @@ export default function CreateContact() {
               id="firstName"
               type="text"
               maxLength="40"
-              value={contacts.firstName}
+              value={disabledButton.firstName}
               onChange={handleChange}
               placeholder="Max"
             />
@@ -29,7 +28,7 @@ export default function CreateContact() {
               id="lastName"
               type="text"
               maxLength="40"
-              value={contacts.lastName}
+              value={disabledButton.lastName}
               onChange={handleChange}
               placeholder="Mustermann"
             />
@@ -58,7 +57,7 @@ export default function CreateContact() {
           Adresse
           <input name="zip" type="text" id="street" placeholder="Straße" />
           <LabelWrapper>
-            <input name="zip" type="number" id="zip" placeholder="PLZ" />
+            <input name="zip" type="text" id="zip" placeholder="PLZ" />
             <input name="city" type="text" id="city" placeholder="Stadt" />
           </LabelWrapper>
         </LabelStyled>
@@ -83,29 +82,26 @@ export default function CreateContact() {
   )
 
   function handleChange() {
-    setDisabledButton(contacts.firstName === '' ? true : false)
+    setDisabledButton(disabledButton.firstName === '' ? true : false)
   }
 
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const contact = [
-      {
-        firstName: form.firstName.value,
-        lastName: form.lastName.value,
-        company: form.company.value,
-        phone: form.phone.value,
-        mail: form.mail.value,
-        street: form.street.value,
-        zip: form.zip.value,
-        city: form.city.value,
-        note: form.note.value,
-        category: form.category.value,
-      },
-    ]
-    console.log(contact)
-    setContacts([contact, ...contacts])
-    setDisabledButton(true)
+    const contactItem = {
+      firstName: form.firstName.value,
+      lastName: form.lastName.value,
+      company: form.company.value,
+      phone: form.phone.value,
+      mail: form.mail.value,
+      street: form.street.value,
+      zip: form.zip.value,
+      city: form.city.value,
+      note: form.note.value,
+      category: form.category.value,
+    }
+    console.log(contactItem)
+    onSubmit(contactItem)
     form.reset()
     form[0] && form[0].focus()
   }

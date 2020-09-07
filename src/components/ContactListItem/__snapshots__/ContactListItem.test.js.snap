@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The listItem renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <li>
+        <div
+          class="sc-AxjAm cWjJCB"
+        >
+          <section
+            class="sc-AxirZ eNZlaP"
+          >
+            <svg
+              height="38"
+              viewBox="0 0 27 30"
+              width="35"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30,33a1.417,1.417,0,0,1-1.5-1.5v-3A4.42,4.42,0,0,0,24,24H12a4.42,4.42,0,0,0-4.5,4.5v3A1.417,1.417,0,0,1,6,33a1.417,1.417,0,0,1-1.5-1.5v-3A7.427,7.427,0,0,1,12,21H24a7.427,7.427,0,0,1,7.5,7.5v3A1.417,1.417,0,0,1,30,33ZM18,18a7.427,7.427,0,0,1-7.5-7.5,7.5,7.5,0,0,1,15,0A7.427,7.427,0,0,1,18,18ZM18,6a4.42,4.42,0,0,0-4.5,4.5,4.5,4.5,0,0,0,9,0A4.42,4.42,0,0,0,18,6Z"
+                transform="translate(-4.5 -3)"
+              />
+            </svg>
+          </section>
+          <div
+            class="sc-AxiKw itKgEF"
+          >
+            undefined undefined
+          </div>
+          <div
+            class="sc-AxiKw itKgEF"
+          />
+        </div>
+      </li>
+    </div>
+  </body>,
+  "container": <div>
+    <li>
+      <div
+        class="sc-AxjAm cWjJCB"
+      >
+        <section
+          class="sc-AxirZ eNZlaP"
+        >
+          <svg
+            height="38"
+            viewBox="0 0 27 30"
+            width="35"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30,33a1.417,1.417,0,0,1-1.5-1.5v-3A4.42,4.42,0,0,0,24,24H12a4.42,4.42,0,0,0-4.5,4.5v3A1.417,1.417,0,0,1,6,33a1.417,1.417,0,0,1-1.5-1.5v-3A7.427,7.427,0,0,1,12,21H24a7.427,7.427,0,0,1,7.5,7.5v3A1.417,1.417,0,0,1,30,33ZM18,18a7.427,7.427,0,0,1-7.5-7.5,7.5,7.5,0,0,1,15,0A7.427,7.427,0,0,1,18,18ZM18,6a4.42,4.42,0,0,0-4.5,4.5,4.5,4.5,0,0,0,9,0A4.42,4.42,0,0,0,18,6Z"
+              transform="translate(-4.5 -3)"
+            />
+          </svg>
+        </section>
+        <div
+          class="sc-AxiKw itKgEF"
+        >
+          undefined undefined
+        </div>
+        <div
+          class="sc-AxiKw itKgEF"
+        />
+      </div>
+    </li>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

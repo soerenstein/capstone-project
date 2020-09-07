@@ -86,7 +86,7 @@ Object {
                 id="zip"
                 name="zip"
                 placeholder="PLZ"
-                type="number"
+                type="text"
               />
               <input
                 id="city"
@@ -209,7 +209,7 @@ Object {
               id="zip"
               name="zip"
               placeholder="PLZ"
-              type="number"
+              type="text"
             />
             <input
               id="city"
