@@ -1,20 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
 
-const contacts = {
-  firstName: 'Max',
-  lastName: 'Mustermann',
-  company: 'Universal GmbH',
-  phone: '0176-123123123',
-  mail: 'max.mustermann@universal.de',
-  street: 'ABC-Straße 105',
-  zip: '20239',
-  city: 'Hamburg',
-  note: 'Wv Montag',
-  category: 'pot. Kunde',
-}
-
-export default function ProfileContent() {
+export default function ProfileContent({contacts}) {
   const [isCategoryVisible, setIsCategoryVisible] = useState(false)
   const [isNoteVisible, setIsNoteVisible] = useState(false)
   return (
