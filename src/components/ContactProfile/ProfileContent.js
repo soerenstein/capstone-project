@@ -14,7 +14,7 @@ const contacts = {
   category: 'pot. Kunde',
 }
 
-export default function ContactProfile() {
+export default function ProfileContent() {
   const [isCategoryVisible, setIsCategoryVisible] = useState(false)
   const [isNoteVisible, setIsNoteVisible] = useState(false)
   return (
