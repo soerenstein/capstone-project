@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ContactList from './components/ContactList/ContactList'
 import CreateContact from './components/CreateContact/CreateContact'
+import ContactProfile from './components/ContactProfile/ContactProfile'
 
 export default function App() {
   const [contacts, setContacts] = useState([
@@ -19,6 +20,9 @@ export default function App() {
         </Route>
         <Route path="/list">
           <ContactList contacts={contacts} />
+        </Route>
+        <Route path="/profile">
+          <ContactProfile />
         </Route>
       </Switch>
     </Router>
