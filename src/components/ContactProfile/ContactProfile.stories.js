@@ -12,6 +12,6 @@ const Profile = (args) => <ContactProfile {...args} />
 export const ProfilePage = Profile.bind({})
 ProfilePage.args = {}
 
-const Content = (args) => <CardWrapper />
+const Content = () => <CardWrapper />
 
 export const ContentItem = Content.bind({})
