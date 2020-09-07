@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components/macro'
+import styled from 'styled-components'
 
 export default function ContactListItem({
   firstName,
@@ -8,7 +8,7 @@ export default function ContactListItem({
   index,
 }) {
   return (
-<li key={index}>
+    <li key={index}>
       <ContactContainer>
         <SVGWrapper>
           <svg
@@ -29,13 +29,10 @@ export default function ContactListItem({
         <StyledContactInformation>{company}</StyledContactInformation>
       </ContactContainer>
     </li>
-    
   )
 }
 
-
-
-const ContactContainer = styled.section`
+const ContactContainer = styled.div`
   padding: 10px 30px;
   height: 100%;
   margin: 10px;
@@ -53,13 +50,9 @@ const SVGWrapper = styled.section`
 `
 const StyledContactInformation = styled.div`
   padding: 5px;
-  margin: 0; 
   justify-self: start;
   grid-column: 2;
   word-wrap: break-word;
   overflow: hidden;
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
   height: 1em;
 `

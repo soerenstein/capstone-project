@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <li>
-        <section
-          class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+        <div
+          class="sc-AxjAm cWjJCB"
         >
           <section
-            class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
+            class="sc-AxirZ eNZlaP"
           >
             <svg
               height="38"
@@ -25,24 +25,24 @@ Object {
             </svg>
           </section>
           <div
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+            class="sc-AxiKw itKgEF"
           >
             undefined undefined
           </div>
           <div
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+            class="sc-AxiKw itKgEF"
           />
-        </section>
+        </div>
       </li>
     </div>
   </body>,
   "container": <div>
     <li>
-      <section
-        class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+      <div
+        class="sc-AxjAm cWjJCB"
       >
         <section
-          class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
+          class="sc-AxirZ eNZlaP"
         >
           <svg
             height="38"
@@ -57,14 +57,14 @@ Object {
           </svg>
         </section>
         <div
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+          class="sc-AxiKw itKgEF"
         >
           undefined undefined
         </div>
         <div
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+          class="sc-AxiKw itKgEF"
         />
-      </section>
+      </div>
     </li>
   </div>,
   "debug": [Function],
