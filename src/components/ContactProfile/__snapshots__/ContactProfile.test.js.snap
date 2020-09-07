@@ -26,7 +26,7 @@ Object {
           >
             Kontaktdaten
           </h4>
-          <li
+          <p
             class="ProfileContent__DetailItemContainer-sc-19q8044-4 ddgpiS"
           >
             <p
@@ -39,13 +39,13 @@ Object {
             >
               max.mustermann@universal.de
             </p>
-          </li>
+          </p>
           <h4
             class="ProfileContent__DetailItemHeading-sc-19q8044-5 hLDmSe"
           >
             Adresse
           </h4>
-          <li
+          <p
             class="ProfileContent__DetailItemContainer-sc-19q8044-4 ddgpiS"
           >
             <p
@@ -56,14 +56,9 @@ Object {
             <p
               class="ProfileContent__DetailItemContent-sc-19q8044-6 fVJJvY"
             >
-              20239
+              20239 Hamburg
             </p>
-            <p
-              class="ProfileContent__DetailItemContent-sc-19q8044-6 fVJJvY"
-            >
-              Hamburg
-            </p>
-          </li>
+          </p>
           <h4
             class="ProfileContent__DetailItemHeading-sc-19q8044-5 hLDmSe"
           >
@@ -100,7 +95,7 @@ Object {
         >
           Kontaktdaten
         </h4>
-        <li
+        <p
           class="ProfileContent__DetailItemContainer-sc-19q8044-4 ddgpiS"
         >
           <p
@@ -113,13 +108,13 @@ Object {
           >
             max.mustermann@universal.de
           </p>
-        </li>
+        </p>
         <h4
           class="ProfileContent__DetailItemHeading-sc-19q8044-5 hLDmSe"
         >
           Adresse
         </h4>
-        <li
+        <p
           class="ProfileContent__DetailItemContainer-sc-19q8044-4 ddgpiS"
         >
           <p
@@ -130,14 +125,9 @@ Object {
           <p
             class="ProfileContent__DetailItemContent-sc-19q8044-6 fVJJvY"
           >
-            20239
+            20239 Hamburg
           </p>
-          <p
-            class="ProfileContent__DetailItemContent-sc-19q8044-6 fVJJvY"
-          >
-            Hamburg
-          </p>
-        </li>
+        </p>
         <h4
           class="ProfileContent__DetailItemHeading-sc-19q8044-5 hLDmSe"
         >

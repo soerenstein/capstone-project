@@ -17,8 +17,7 @@ export default function ProfileContent({contacts}) {
         <DetailItemHeading>Adresse</DetailItemHeading>
         <DetailItemContainer>
           <DetailItemContent>{contacts.street}</DetailItemContent>
-          <DetailItemContent>{contacts.zip}</DetailItemContent>
-          <DetailItemContent>{contacts.city}</DetailItemContent>
+          <DetailItemContent>{contacts.zip + ' ' + contacts.city}</DetailItemContent>
         </DetailItemContainer>
         <DetailItemHeading onClick={toggleCategory}>
           Kategorie
@@ -86,7 +85,7 @@ const DetailListStyled = styled.ul`
   padding: 0;
 `
 
-const DetailItemContainer = styled.li`
+const DetailItemContainer = styled.p`
   background: white;
   border-radius: 30px;
   padding: 10px 0 10px 30px;
