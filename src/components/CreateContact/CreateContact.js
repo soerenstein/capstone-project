@@ -57,7 +57,7 @@ export default function CreateContact({ onSubmit }) {
           Adresse
           <input name="zip" type="text" id="street" placeholder="Straße" />
           <LabelWrapper>
-            <input name="zip" type="number" id="zip" placeholder="PLZ" />
+            <input name="zip" type="text" id="zip" placeholder="PLZ" />
             <input name="city" type="text" id="city" placeholder="Stadt" />
           </LabelWrapper>
         </LabelStyled>

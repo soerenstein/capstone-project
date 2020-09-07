@@ -34,7 +34,7 @@ export default function ContactListItem({
 
 const ContactContainer = styled.div`
   padding: 10px 30px;
-  height: 60px;
+  height: 100%;
   margin: 10px;
   display: grid;
   grid-template-columns: 30% auto;
