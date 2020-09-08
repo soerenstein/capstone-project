@@ -4,6 +4,7 @@ import ContactList from './components/ContactList/ContactList'
 import CreateContact from './components/CreateContact/CreateContact'
 import ContactProfile from './components/ContactProfile/ContactProfile'
 import HomePage from './components/HomePage/HomePage'
+import UserProfile from './components/UserProfile/UserProfile'
 
 export default function App() {
   const user = {
@@ -20,7 +21,9 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/user-profile"></Route>
+        <Route path="/user-profile">
+          <UserProfile />
+        </Route>
         <Route path="/favorites"></Route>
         <Route path="/create">
           <CreateContact onSubmit={addContactItem} />
