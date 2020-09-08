@@ -7,15 +7,14 @@ import NavButton from './NavButton'
 export default function HomePage({ user }) {
   return (
     <div>
-        <TopLeftCard  /> 
-       <WelcomeUser user={user}/>
+      <TopLeftCard />
+      <WelcomeUser user={user} />
       <StyledCardWrapper>
         <NavButton />
       </StyledCardWrapper>
     </div>
   )
 }
-
 
 const StyledCardWrapper = styled.div`
   position: absolute;
