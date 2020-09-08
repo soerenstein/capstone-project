@@ -2,11 +2,7 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 export default function TopLeftCard() {
-    return (
-<>
-        <StyledTopCard /> 
-</>
-    )
+  return <StyledTopCard />
 }
 
 const StyledTopCard = styled.div`

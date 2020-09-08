@@ -6,7 +6,7 @@ export default function CardWrapper() {
 }
 
 const StyledCardWrapper = styled.div`
-    position: absolute;
+  position: absolute;
   bottom: 0;
   left: 15px;
   right: 15px;

@@ -6,13 +6,13 @@ import NavButton from './NavButton'
 
 export default function HomePage({ user }) {
   return (
-    <div>
+    <>
       <TopLeftCard />
       <WelcomeUser user={user} />
       <StyledCardWrapper>
         <NavButton />
       </StyledCardWrapper>
-    </div>
+    </>
   )
 }
 
