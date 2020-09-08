@@ -51,15 +51,13 @@ const SVGWrapper = styled.section`
   justify-self: center;
   align-self: center;
 `
-const StyledContactInformation = styled.div`
+const StyledContactInformation = styled.p`
   padding: 5px;
   margin: 0; 
   justify-self: start;
   grid-column: 2;
-  word-wrap: break-word;
-  overflow: hidden;
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
+  word-break: break-word; 
+    overflow: hidden;
+  text-overflow: ellipsis;
   height: 1em;
 `
