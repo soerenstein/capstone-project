@@ -3,8 +3,14 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ContactList from './components/ContactList/ContactList'
 import CreateContact from './components/CreateContact/CreateContact'
 import ContactProfile from './components/ContactProfile/ContactProfile'
+import HomePage from './components/HomePage/HomePage'
 
 export default function App() {
+  const user = {
+    firstName: 'Maxi',
+    lastName: 'Muster',
+    company: 'Universal Event GmbH',
+  }
   const [contacts, setContacts] = useState([
     { firstName: 'Max', lastName: 'Mustermann', company: 'Muster GmbH' },
     { firstName: 'Erika', lastName: 'Mustermann', company: 'Universal GmbH' },
@@ -14,6 +20,8 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/user-profile"></Route>
+        <Route path="/favorites"></Route>
         <Route path="/create">
           <CreateContact onSubmit={addContactItem} />
           <ContactList contacts={contacts} />
@@ -23,6 +31,9 @@ export default function App() {
         </Route>
         <Route path="/profile">
           <ContactProfile />
+        </Route>
+        <Route path="/">
+          <HomePage user={user} />
         </Route>
       </Switch>
     </Router>
