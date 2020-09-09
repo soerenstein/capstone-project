@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { v4 as uuidv4 } from 'uuid';
 
 export default function CreateContact({ onSubmit }) {
   const [disabledButton, setDisabledButton] = useState(true)
@@ -16,7 +17,6 @@ export default function CreateContact({ onSubmit }) {
               id="firstName"
               type="text"
               maxLength="40"
-              value={disabledButton.firstName}
               onChange={handleChange}
               placeholder="Max"
             />
@@ -28,7 +28,6 @@ export default function CreateContact({ onSubmit }) {
               id="lastName"
               type="text"
               maxLength="40"
-              value={disabledButton.lastName}
               onChange={handleChange}
               placeholder="Mustermann"
             />
@@ -81,8 +80,8 @@ export default function CreateContact({ onSubmit }) {
     </div>
   )
 
-  function handleChange() {
-    setDisabledButton(disabledButton.firstName === '' ? true : false)
+  function handleChange(event) {
+    setDisabledButton(event.target.firstName === '' ? true : false)
   }
 
   function handleSubmit(event) {
@@ -99,9 +98,10 @@ export default function CreateContact({ onSubmit }) {
       city: form.city.value,
       note: form.note.value,
       category: form.category.value,
+      id: uuidv4(),
     }
-    console.log(contactItem)
     onSubmit(contactItem)
+    setDisabledButton(true)
     form.reset()
     form[0] && form[0].focus()
   }
