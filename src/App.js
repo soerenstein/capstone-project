@@ -23,7 +23,6 @@ export default function App() {
         <Route path="/favorites"></Route>
         <Route path="/create">
           <CreateContact onSubmit={addContact} />
-          <ContactList contacts={contacts} />
         </Route>
         <Route path="/list">
           <ContactList contacts={contacts} />
