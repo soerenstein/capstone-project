@@ -44,7 +44,5 @@ export default function App() {
       'savedContact',
       JSON.stringify([...contacts, contactItem])
     )
-    const savedContact = localStorage.getItem('savedContact')
-    console.log(savedContact)
   }
 }
