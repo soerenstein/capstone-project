@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid';
 
-export default function CreateContact({ onSubmit }) {
+export default function CreateContactForm({ onSubmit }) {
   const [disabledButton, setDisabledButton] = useState(true)
 
   return (
     <div>
       <FormStyled onSubmit={handleSubmit}>
         <LabelWrapper>
-          <LabelStyled>
+          <LabelStyled htmlFor="firstName">
             Vorname
             <input
               autoFocus
@@ -21,7 +21,7 @@ export default function CreateContact({ onSubmit }) {
               placeholder="Max"
             />
           </LabelStyled>
-          <LabelStyled>
+          <LabelStyled htmlFor="lastName">
             Nachname
             <input
               name="lastName"
@@ -33,7 +33,7 @@ export default function CreateContact({ onSubmit }) {
             />
           </LabelStyled>
         </LabelWrapper>
-        <LabelStyled>
+        <LabelStyled htmlFor="company">
           Unternehmen
           <input
             name="company"
@@ -43,16 +43,16 @@ export default function CreateContact({ onSubmit }) {
             placeholder="Universal GmbH"
           />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="phone">
           Telefon
           <input name="phone" type="tel" id="phone" />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="mail">
           E-Mail
           <input name="mail" id="mail" />
         </LabelStyled>
 
-        <LabelStyled>
+        <LabelStyled htmlFor="street">
           Adresse
           <input name="zip" type="text" id="street" placeholder="Straße" />
           <LabelWrapper>
@@ -60,11 +60,11 @@ export default function CreateContact({ onSubmit }) {
             <input name="city" type="text" id="city" placeholder="Stadt" />
           </LabelWrapper>
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="note">
           Notiz
           <input name="note" type="text" id="note" />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="category">
           Kategorie
           <input
             name="category"
