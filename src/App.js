@@ -22,7 +22,7 @@ export default function App() {
         <Route path="/user-profile"></Route>
         <Route path="/favorites"></Route>
         <Route path="/create">
-          <CreateContact onSubmit={addContact} contacts={contacts} />
+          <CreateContact onSubmit={addContact} />
           <ContactList contacts={contacts} />
         </Route>
         <Route path="/list">
