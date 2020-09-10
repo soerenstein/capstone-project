@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid';
 
 export default function CreateContactForm({ onSubmit }) {
-  const [disabledButton, setDisabledButton] = useState(true)
 
+  const [firstName, setFirstName] = useState(false)
+  const [lastName, setLastName] = useState(false)
+
+  const disabledButton = !firstName && !lastName
+  
   return (
     <div>
       <FormStyled onSubmit={handleSubmit}>
@@ -39,7 +43,6 @@ export default function CreateContactForm({ onSubmit }) {
             name="company"
             id="company"
             type="text"
-            onChange={handleChange}
             placeholder="Universal GmbH"
           />
         </LabelStyled>
@@ -81,7 +84,8 @@ export default function CreateContactForm({ onSubmit }) {
   )
 
   function handleChange(event) {
-    setDisabledButton(event.target.firstName === '' ? true : false)
+    event.target.id === "firstName" && setFirstName(event.target.id === "firstName" && event.target.value !== '' ? true : false)
+    event.target.id === "lastName" &&  setLastName(event.target.id === "lastName" && event.target.value !== '' ? true : false)    
   }
 
   function handleSubmit(event) {
@@ -101,7 +105,6 @@ export default function CreateContactForm({ onSubmit }) {
       id: uuidv4(),
     }
     onSubmit(contactItem)
-    setDisabledButton(true)
     form.reset()
     form[0] && form[0].focus()
   }
