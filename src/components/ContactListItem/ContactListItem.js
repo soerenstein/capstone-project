@@ -5,10 +5,10 @@ export default function ContactListItem({
   firstName,
   lastName,
   company,
-  index,
+  id,
 }) {
   return (
-<li key={index}>
+<li key={id}>
       <ContactContainer>
         <SVGWrapper>
           <svg
@@ -33,8 +33,6 @@ export default function ContactListItem({
   )
 }
 
-
-
 const ContactContainer = styled.section`
   padding: 10px 30px;
   height: 100%;
@@ -56,10 +54,9 @@ const StyledContactInformation = styled.div`
   margin: 0; 
   justify-self: start;
   grid-column: 2;
-  word-wrap: break-word;
+  word-wrap: normal;
+  width: 90%; 
   overflow: hidden;
-  /* white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; */
+  text-overflow: ellipsis;
   height: 1em;
 `

@@ -1,14 +1,19 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { v4 as uuidv4 } from 'uuid';
 
-export default function CreateContact({ onSubmit }) {
-  const [disabledButton, setDisabledButton] = useState(true)
+export default function CreateContactForm({ onSubmit }) {
 
+  const [firstName, setFirstName] = useState(false)
+  const [lastName, setLastName] = useState(false)
+
+  const disabledButton = !firstName && !lastName
+  
   return (
     <div>
       <FormStyled onSubmit={handleSubmit}>
         <LabelWrapper>
-          <LabelStyled>
+          <LabelStyled htmlFor="firstName">
             Vorname
             <input
               autoFocus
@@ -16,44 +21,41 @@ export default function CreateContact({ onSubmit }) {
               id="firstName"
               type="text"
               maxLength="40"
-              value={disabledButton.firstName}
               onChange={handleChange}
               placeholder="Max"
             />
           </LabelStyled>
-          <LabelStyled>
+          <LabelStyled htmlFor="lastName">
             Nachname
             <input
               name="lastName"
               id="lastName"
               type="text"
               maxLength="40"
-              value={disabledButton.lastName}
               onChange={handleChange}
               placeholder="Mustermann"
             />
           </LabelStyled>
         </LabelWrapper>
-        <LabelStyled>
+        <LabelStyled htmlFor="company">
           Unternehmen
           <input
             name="company"
             id="company"
             type="text"
-            onChange={handleChange}
             placeholder="Universal GmbH"
           />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="phone">
           Telefon
           <input name="phone" type="tel" id="phone" />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="mail">
           E-Mail
           <input name="mail" id="mail" />
         </LabelStyled>
 
-        <LabelStyled>
+        <LabelStyled htmlFor="street">
           Adresse
           <input name="zip" type="text" id="street" placeholder="Straße" />
           <LabelWrapper>
@@ -61,11 +63,11 @@ export default function CreateContact({ onSubmit }) {
             <input name="city" type="text" id="city" placeholder="Stadt" />
           </LabelWrapper>
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="note">
           Notiz
           <input name="note" type="text" id="note" />
         </LabelStyled>
-        <LabelStyled>
+        <LabelStyled htmlFor="category">
           Kategorie
           <input
             name="category"
@@ -81,8 +83,9 @@ export default function CreateContact({ onSubmit }) {
     </div>
   )
 
-  function handleChange() {
-    setDisabledButton(disabledButton.firstName === '' ? true : false)
+  function handleChange(event) {
+    event.target.id === "firstName" && setFirstName(event.target.id === "firstName" && event.target.value !== '' ? true : false)
+    event.target.id === "lastName" &&  setLastName(event.target.id === "lastName" && event.target.value !== '' ? true : false)    
   }
 
   function handleSubmit(event) {
@@ -99,8 +102,8 @@ export default function CreateContact({ onSubmit }) {
       city: form.city.value,
       note: form.note.value,
       category: form.category.value,
+      id: uuidv4(),
     }
-    console.log(contactItem)
     onSubmit(contactItem)
     form.reset()
     form[0] && form[0].focus()

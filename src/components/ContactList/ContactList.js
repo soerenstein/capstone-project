@@ -5,8 +5,8 @@ import ContactListItem from '../ContactListItem/ContactListItem'
 export default function ContactList({ contacts }) {
   return (
     <StyledList>
-      {contacts.map((contactCard, index) => (
-        <ContactListItem key={index} {...contactCard} />
+      {contacts.map((contact) => (
+        <ContactListItem key={contact.id} {...contact} />
       ))}
     </StyledList>
   )
