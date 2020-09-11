@@ -7,10 +7,10 @@ Object {
     <div>
       <li>
         <section
-          class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+          class="ContactListItem__ContactContainer-q0ui6m-0 cZncpw"
         >
           <section
-            class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
+            class="ContactListItem__SVGWrapper-q0ui6m-1 CAeIO"
           >
             <svg
               height="38"
@@ -25,12 +25,12 @@ Object {
             </svg>
           </section>
           <div
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+            class="ContactListItem__StyledContactInformation-q0ui6m-2 jbYSju"
           >
             undefined undefined
           </div>
           <div
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+            class="ContactListItem__StyledContactInformation-q0ui6m-2 jbYSju"
           />
         </section>
       </li>
@@ -39,10 +39,10 @@ Object {
   "container": <div>
     <li>
       <section
-        class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+        class="ContactListItem__ContactContainer-q0ui6m-0 cZncpw"
       >
         <section
-          class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
+          class="ContactListItem__SVGWrapper-q0ui6m-1 CAeIO"
         >
           <svg
             height="38"
@@ -57,12 +57,12 @@ Object {
           </svg>
         </section>
         <div
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 jbYSju"
         >
           undefined undefined
         </div>
         <div
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 bWSyfB"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 jbYSju"
         />
       </section>
     </li>

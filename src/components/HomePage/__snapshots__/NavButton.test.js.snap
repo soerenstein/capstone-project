@@ -7,21 +7,21 @@ Object {
     <div>
       <div>
         <div
-          class="NavButton__NavWrapper-sc-1tu5d0l-0 kKIkyu"
+          class="NavButton__NavWrapper-sc-1tu5d0l-0 kEAEWJ"
         >
           <a
             href="/user-profile"
           >
             <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+              class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
             >
               <img
                 alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+                class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
                 src=""
               />
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
               >
                 Profil
               </h2>
@@ -31,15 +31,15 @@ Object {
             href="/create"
           >
             <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+              class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
             >
               <img
                 alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+                class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
                 src=""
               />
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
               >
                 Kontakt hinzufügen
               </h2>
@@ -49,15 +49,15 @@ Object {
             href="/list"
           >
             <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+              class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
             >
               <img
                 alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+                class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
                 src=""
               />
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
               >
                 Kontaktliste
               </h2>
@@ -67,15 +67,15 @@ Object {
             href="/favorites"
           >
             <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+              class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
             >
               <img
                 alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+                class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
                 src=""
               />
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
               >
                 Favoriten
               </h2>
@@ -88,21 +88,21 @@ Object {
   "container": <div>
     <div>
       <div
-        class="NavButton__NavWrapper-sc-1tu5d0l-0 kKIkyu"
+        class="NavButton__NavWrapper-sc-1tu5d0l-0 kEAEWJ"
       >
         <a
           href="/user-profile"
         >
           <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
           >
             <img
               alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+              class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
               src=""
             />
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
             >
               Profil
             </h2>
@@ -112,15 +112,15 @@ Object {
           href="/create"
         >
           <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
           >
             <img
               alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+              class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
               src=""
             />
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
             >
               Kontakt hinzufügen
             </h2>
@@ -130,15 +130,15 @@ Object {
           href="/list"
         >
           <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
           >
             <img
               alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+              class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
               src=""
             />
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
             >
               Kontaktliste
             </h2>
@@ -148,15 +148,15 @@ Object {
           href="/favorites"
         >
           <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            class="NavButton__ButtonStyled-sc-1tu5d0l-1 jOLfRk"
           >
             <img
               alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
+              class="NavButton__IconStyled-sc-1tu5d0l-2 exksyk"
               src=""
             />
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-3 jTqXgv"
             >
               Favoriten
             </h2>
