@@ -76,7 +76,7 @@ export default function CreateContactForm({ onSubmit }) {
             placeholder="Kunde, Dienstleister"
           />
         </LabelStyled>
-        <SubmitButton disabled={disabledButton}>
+        <SubmitButton id="submit" disabled={disabledButton}>
           Kontakt hinzufügen
         </SubmitButton>
       </FormStyled>

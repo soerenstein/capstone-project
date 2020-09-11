@@ -7,13 +7,13 @@ Object {
     <div>
       <div>
         <form
-          class="sc-AxjAm htDRZe"
+          class="sc-bdnylx dRyYZH"
         >
           <div
-            class="sc-AxirZ erNbfn"
+            class="sc-gtssRu ftdAIY"
           >
             <label
-              class="sc-AxiKw bMvXWd"
+              class="sc-dlnjPT bGySTC"
             >
               Vorname
               <input
@@ -26,7 +26,7 @@ Object {
               />
             </label>
             <label
-              class="sc-AxiKw bMvXWd"
+              class="sc-dlnjPT bGySTC"
             >
               Nachname
               <input
@@ -40,7 +40,7 @@ Object {
             </label>
           </div>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Unternehmen
             <input
@@ -51,7 +51,7 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Telefon
             <input
@@ -61,7 +61,7 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             E-Mail
             <input
@@ -70,7 +70,7 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Adresse
             <input
@@ -80,7 +80,7 @@ Object {
               type="text"
             />
             <div
-              class="sc-AxirZ erNbfn"
+              class="sc-gtssRu ftdAIY"
             >
               <input
                 id="zip"
@@ -97,7 +97,7 @@ Object {
             </div>
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Notiz
             <input
@@ -107,7 +107,7 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Kategorie
             <input
@@ -118,8 +118,9 @@ Object {
             />
           </label>
           <button
-            class="sc-AxhCb ccMvAG"
+            class="sc-hKFyIo"
             disabled=""
+            id="submit"
           >
             Kontakt hinzufügen
           </button>
@@ -130,13 +131,13 @@ Object {
   "container": <div>
     <div>
       <form
-        class="sc-AxjAm htDRZe"
+        class="sc-bdnylx dRyYZH"
       >
         <div
-          class="sc-AxirZ erNbfn"
+          class="sc-gtssRu ftdAIY"
         >
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Vorname
             <input
@@ -149,7 +150,7 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
           >
             Nachname
             <input
@@ -163,7 +164,7 @@ Object {
           </label>
         </div>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           Unternehmen
           <input
@@ -174,7 +175,7 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           Telefon
           <input
@@ -184,7 +185,7 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           E-Mail
           <input
@@ -193,7 +194,7 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           Adresse
           <input
@@ -203,7 +204,7 @@ Object {
             type="text"
           />
           <div
-            class="sc-AxirZ erNbfn"
+            class="sc-gtssRu ftdAIY"
           >
             <input
               id="zip"
@@ -220,7 +221,7 @@ Object {
           </div>
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           Notiz
           <input
@@ -230,7 +231,7 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
         >
           Kategorie
           <input
@@ -241,8 +242,9 @@ Object {
           />
         </label>
         <button
-          class="sc-AxhCb ccMvAG"
+          class="sc-hKFyIo"
           disabled=""
+          id="submit"
         >
           Kontakt hinzufügen
         </button>
