@@ -4,34 +4,36 @@ import styled from 'styled-components/macro'
 export default function ProfileContent({contacts}) {
   const [isCategoryVisible, setIsCategoryVisible] = useState(false)
   const [isNoteVisible, setIsNoteVisible] = useState(false)
+  const {firstName, lastName, company, phone, mail, street, zip, city, category, note} = contacts
+  
   return (
     <ProfileWrapper>
-      <NameStyled>{contacts.firstName + ' ' + contacts.lastName}</NameStyled>
-      <CompanyStyled>{contacts.company}</CompanyStyled>
+      <NameStyled>{firstName + ' ' + lastName}</NameStyled>
+      <CompanyStyled>{company}</CompanyStyled>
       <DetailListStyled>
         <DetailItemHeading>Kontaktdaten</DetailItemHeading>
         <DetailItemContainer>
-          <DetailItemContent>{contacts.phone}</DetailItemContent>
-          <DetailItemContent>{contacts.mail}</DetailItemContent>
+          <DetailItemContent>{phone}</DetailItemContent>
+          <DetailItemContent>{mail}</DetailItemContent>
         </DetailItemContainer>
         <DetailItemHeading>Adresse</DetailItemHeading>
         <DetailItemContainer>
-          <DetailItemContent>{contacts.street}</DetailItemContent>
-          <DetailItemContent>{contacts.zip + ' ' + contacts.city}</DetailItemContent>
+          <DetailItemContent>{street}</DetailItemContent>
+          <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
         </DetailItemContainer>
         <DetailItemHeading onClick={toggleCategory}>
           Kategorie
         </DetailItemHeading>
         {isCategoryVisible ? (
           <DetailItemContainer>
-            <DetailItemContent>{contacts.category}</DetailItemContent>
+            <DetailItemContent>{category}</DetailItemContent>
           </DetailItemContainer>
         ) : null}
 
         <DetailItemHeading onClick={toggleNote}>Notiz</DetailItemHeading>
         {isNoteVisible ? (
           <DetailItemContainer>
-            <DetailItemContent>{contacts.note}</DetailItemContent>
+            <DetailItemContent>{note}</DetailItemContent>
           </DetailItemContainer>
         ) : null}
       </DetailListStyled>

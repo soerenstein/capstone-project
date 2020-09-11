@@ -1,27 +1,13 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { ReactComponent as UserIcon } from '../Design/img/user.svg'
 
-export default function ContactListItem({
-  firstName,
-  lastName,
-  company,
-  id,
-}) {
+export default function ContactListItem({ firstName, lastName, company, id }) {
   return (
-<li key={id}>
+    <li key={id}>
       <ContactContainer>
         <SVGWrapper>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="35"
-            height="38"
-            viewBox="0 0 27 30"
-          >
-            <path
-              d="M30,33a1.417,1.417,0,0,1-1.5-1.5v-3A4.42,4.42,0,0,0,24,24H12a4.42,4.42,0,0,0-4.5,4.5v3A1.417,1.417,0,0,1,6,33a1.417,1.417,0,0,1-1.5-1.5v-3A7.427,7.427,0,0,1,12,21H24a7.427,7.427,0,0,1,7.5,7.5v3A1.417,1.417,0,0,1,30,33ZM18,18a7.427,7.427,0,0,1-7.5-7.5,7.5,7.5,0,0,1,15,0A7.427,7.427,0,0,1,18,18ZM18,6a4.42,4.42,0,0,0-4.5,4.5,4.5,4.5,0,0,0,9,0A4.42,4.42,0,0,0,18,6Z"
-              transform="translate(-4.5 -3)"
-            />
-          </svg>
+          <UserIcon />
         </SVGWrapper>
         <StyledContactInformation>
           {firstName + ' ' + lastName}
@@ -29,7 +15,6 @@ export default function ContactListItem({
         <StyledContactInformation>{company}</StyledContactInformation>
       </ContactContainer>
     </li>
-    
   )
 }
 
@@ -51,11 +36,11 @@ const SVGWrapper = styled.section`
 `
 const StyledContactInformation = styled.p`
   padding: 5px;
-  margin: 0; 
+  margin: 0;
   justify-self: start;
   grid-column: 2;
   word-wrap: normal;
-  width: 90%; 
+  width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
   height: 1em;

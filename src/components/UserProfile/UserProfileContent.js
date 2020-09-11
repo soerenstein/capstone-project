@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function UserProfileContent({ user }) {
+export default function UserProfileContent({ userDataInfo }) {
+
+  const {firstName, lastName, company, phone, mail, street, zip, city} = userDataInfo
+
   return (
-    <>
-      <NameStyled>{user.firstName + ' ' + user.lastName}</NameStyled>
-      <CompanyStyled>{user.company}</CompanyStyled>
       <ProfileWrapper>
+        <NameStyled>{firstName + ' ' + lastName}</NameStyled>
+        <CompanyStyled>{company}</CompanyStyled>
         <DetailListStyled>
           <DetailItemHeading>Kontaktdaten</DetailItemHeading>
           <DetailItemContainer>
-            <DetailItemContent>{user.phone}</DetailItemContent>
-            <DetailItemContent>{user.mail}</DetailItemContent>
+            <DetailItemContent>T: {phone}</DetailItemContent>
+            <DetailItemContent>M: {mail}</DetailItemContent>
           </DetailItemContainer>
           <DetailItemHeading>Adresse</DetailItemHeading>
           <DetailItemContainer>
-            <DetailItemContent>{user.street}</DetailItemContent>
-            <DetailItemContent>{user.zip + ' ' + user.city}</DetailItemContent>
+            <DetailItemContent>{street}</DetailItemContent>
+            <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
           </DetailItemContainer>
         </DetailListStyled>
       </ProfileWrapper>
-    </>
   )
 }
 
 const ProfileWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
+  position: sticky;
   left: 15px;
   right: 15px;
   margin: 0 auto;
@@ -37,20 +37,20 @@ const ProfileWrapper = styled.div`
     rgba(255, 171, 29, 1) 0%,
     rgba(248, 80, 28, 1) 100%
   );
-  height: 50vh;
+
   z-index: 100;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 `
 
 const NameStyled = styled.h2`
-  color: black;
+  color: white;
   text-align: center;
   margin: 25px 0 5px 0;
 `
 
 const CompanyStyled = styled.h3`
-  color: black;
+  color: white;
   text-align: center;
   margin: 5px 0;
 `
@@ -60,7 +60,7 @@ const DetailListStyled = styled.ul`
   padding: 0;
 `
 
-const DetailItemContainer = styled.p`
+const DetailItemContainer = styled.div`
   background: white;
   border-radius: 30px;
   padding: 10px 0 10px 30px;
