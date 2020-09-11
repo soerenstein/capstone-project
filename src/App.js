@@ -12,11 +12,10 @@ export default function App() {
     lastName: 'Muster',
     company: 'Universal Event GmbH',
   }
-  const [contacts, setContacts] = useState([
-    { firstName: 'Max', lastName: 'Mustermann', company: 'Muster GmbH' },
-    { firstName: 'Erika', lastName: 'Mustermann', company: 'Universal GmbH' },
-    { firstName: 'Paula', lastName: 'Mustermann', company: 'neuefische GmbH' },
-  ])
+
+  const [contacts, setContacts] = useState(
+    JSON.parse(localStorage.getItem('savedContact')) || []
+  )
 
   return (
     <Router>
@@ -26,8 +25,7 @@ export default function App() {
         </Route>
         <Route path="/favorites"></Route>
         <Route path="/create">
-          <CreateContact onSubmit={addContactItem} />
-          <ContactList contacts={contacts} />
+          <CreateContact onSubmit={addContact} />
         </Route>
         <Route path="/list">
           <ContactList contacts={contacts} />
@@ -42,7 +40,11 @@ export default function App() {
     </Router>
   )
 
-  function addContactItem(contactItem) {
-    setContacts([contactItem, ...contacts])
+  function addContact(contactItem) {
+    setContacts([...contacts, contactItem])
+    localStorage.setItem(
+      'savedContact',
+      JSON.stringify([...contacts, contactItem])
+    )
   }
 }

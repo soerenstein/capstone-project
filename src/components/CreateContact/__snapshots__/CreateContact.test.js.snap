@@ -7,13 +7,14 @@ Object {
     <div>
       <div>
         <form
-          class="sc-AxjAm htDRZe"
+          class="sc-bdnylx dRyYZH"
         >
           <div
-            class="sc-AxirZ erNbfn"
+            class="sc-gtssRu ftdAIY"
           >
             <label
-              class="sc-AxiKw bMvXWd"
+              class="sc-dlnjPT bGySTC"
+              for="firstName"
             >
               Vorname
               <input
@@ -22,11 +23,11 @@ Object {
                 name="firstName"
                 placeholder="Max"
                 type="text"
-                value=""
               />
             </label>
             <label
-              class="sc-AxiKw bMvXWd"
+              class="sc-dlnjPT bGySTC"
+              for="lastName"
             >
               Nachname
               <input
@@ -35,12 +36,12 @@ Object {
                 name="lastName"
                 placeholder="Mustermann"
                 type="text"
-                value=""
               />
             </label>
           </div>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="company"
           >
             Unternehmen
             <input
@@ -51,7 +52,8 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="phone"
           >
             Telefon
             <input
@@ -61,7 +63,8 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="mail"
           >
             E-Mail
             <input
@@ -70,7 +73,8 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="street"
           >
             Adresse
             <input
@@ -80,7 +84,7 @@ Object {
               type="text"
             />
             <div
-              class="sc-AxirZ erNbfn"
+              class="sc-gtssRu ftdAIY"
             >
               <input
                 id="zip"
@@ -97,7 +101,8 @@ Object {
             </div>
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="note"
           >
             Notiz
             <input
@@ -107,7 +112,8 @@ Object {
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="category"
           >
             Kategorie
             <input
@@ -118,8 +124,9 @@ Object {
             />
           </label>
           <button
-            class="sc-AxhCb ccMvAG"
+            class="sc-hKFyIo"
             disabled=""
+            id="submit"
           >
             Kontakt hinzufügen
           </button>
@@ -130,13 +137,14 @@ Object {
   "container": <div>
     <div>
       <form
-        class="sc-AxjAm htDRZe"
+        class="sc-bdnylx dRyYZH"
       >
         <div
-          class="sc-AxirZ erNbfn"
+          class="sc-gtssRu ftdAIY"
         >
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="firstName"
           >
             Vorname
             <input
@@ -145,11 +153,11 @@ Object {
               name="firstName"
               placeholder="Max"
               type="text"
-              value=""
             />
           </label>
           <label
-            class="sc-AxiKw bMvXWd"
+            class="sc-dlnjPT bGySTC"
+            for="lastName"
           >
             Nachname
             <input
@@ -158,12 +166,12 @@ Object {
               name="lastName"
               placeholder="Mustermann"
               type="text"
-              value=""
             />
           </label>
         </div>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="company"
         >
           Unternehmen
           <input
@@ -174,7 +182,8 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="phone"
         >
           Telefon
           <input
@@ -184,7 +193,8 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="mail"
         >
           E-Mail
           <input
@@ -193,7 +203,8 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="street"
         >
           Adresse
           <input
@@ -203,7 +214,7 @@ Object {
             type="text"
           />
           <div
-            class="sc-AxirZ erNbfn"
+            class="sc-gtssRu ftdAIY"
           >
             <input
               id="zip"
@@ -220,7 +231,8 @@ Object {
           </div>
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="note"
         >
           Notiz
           <input
@@ -230,7 +242,8 @@ Object {
           />
         </label>
         <label
-          class="sc-AxiKw bMvXWd"
+          class="sc-dlnjPT bGySTC"
+          for="category"
         >
           Kategorie
           <input
@@ -241,8 +254,9 @@ Object {
           />
         </label>
         <button
-          class="sc-AxhCb ccMvAG"
+          class="sc-hKFyIo"
           disabled=""
+          id="submit"
         >
           Kontakt hinzufügen
         </button>
