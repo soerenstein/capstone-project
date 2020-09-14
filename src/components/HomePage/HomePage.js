@@ -4,11 +4,11 @@ import WelcomeUser from './WelcomeUser'
 import TopLeftCard from '../Design/CardWrapper/TopLeftCard'
 import NavButton from './NavButton'
 
-export default function HomePage({ user }) {
+export default function HomePage({ userDataInfo }) {
   return (
     <>
       <TopLeftCard />
-      <WelcomeUser user={user} />
+      <WelcomeUser userDataInfo={userDataInfo} />
       <StyledCardWrapper>
         <NavButton />
       </StyledCardWrapper>
