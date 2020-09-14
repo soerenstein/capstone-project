@@ -1,27 +1,39 @@
-import React from 'react'
+import React from "react";
 import styled from 'styled-components/macro'
+import { Link } from "react-router-dom";
 
 export default function UserProfileContent({ userDataInfo }) {
-
-  const {firstName, lastName, company, phone, mail, street, zip, city} = userDataInfo
+  const {
+    firstName,
+    lastName,
+    company,
+    phone,
+    mail,
+    street,
+    zip,
+    city,
+  } = userDataInfo
 
   return (
-      <ProfileWrapper>
-        <NameStyled>{firstName + ' ' + lastName}</NameStyled>
-        <CompanyStyled>{company}</CompanyStyled>
-        <DetailListStyled>
-          <DetailItemHeading>Kontaktdaten</DetailItemHeading>
-          <DetailItemContainer>
-            <DetailItemContent>T: {phone}</DetailItemContent>
-            <DetailItemContent>M: {mail}</DetailItemContent>
-          </DetailItemContainer>
-          <DetailItemHeading>Adresse</DetailItemHeading>
-          <DetailItemContainer>
-            <DetailItemContent>{street}</DetailItemContent>
-            <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
-          </DetailItemContainer>
-        </DetailListStyled>
-      </ProfileWrapper>
+    <ProfileWrapper>
+      <NameStyled>{firstName + ' ' + lastName}</NameStyled>
+      <CompanyStyled>{company}</CompanyStyled>
+      <DetailListStyled>
+        <DetailItemHeading>Kontaktdaten</DetailItemHeading>
+        <DetailItemContainer>
+          <DetailItemContent>T: {phone}</DetailItemContent>
+          <DetailItemContent>M: {mail}</DetailItemContent>
+        </DetailItemContainer>
+        <DetailItemHeading>Adresse</DetailItemHeading>
+        <DetailItemContainer>
+          <DetailItemContent>{street}</DetailItemContent>
+          <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
+        </DetailItemContainer>
+      </DetailListStyled>
+      <Link to="/edit-user">
+        <EditButton to="/edit-user">Bearbeiten</EditButton>
+        </Link>
+    </ProfileWrapper>
   )
 }
 
@@ -75,4 +87,7 @@ const DetailItemHeading = styled.h4`
 
 const DetailItemContent = styled.p`
   margin: 10px 0;
+`
+
+const EditButton = styled.button`
 `

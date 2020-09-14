@@ -8,12 +8,6 @@ import UserProfile from './components/UserProfile/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
 
 export default function App() {
-  const user = {
-    firstName: 'Maxi',
-    lastName: 'Muster',
-    company: 'Universal Event GmbH',
-  }
-
   const [contacts, setContacts] = useState(
     JSON.parse(localStorage.getItem('savedContact')) || []
   )
@@ -27,8 +21,14 @@ export default function App() {
     <Router>
       <Switch>
         <Route path="/user-profile">
-        <UserProfileForm onSubmit={addUser} />
-          <UserProfile userDataInfo={userDataInfo} />
+          {localStorage.getItem('savedUserData') !== null ? (
+            <UserProfile userDataInfo={userDataInfo} />
+          ) : (
+            <UserProfileForm onSubmit={addUser} />
+          )}
+        </Route>
+        <Route path="/edit-user">
+          <UserProfileForm onSubmit={addUser} />
         </Route>
         <Route path="/favorites"></Route>
         <Route path="/create">
@@ -41,7 +41,7 @@ export default function App() {
           <ContactProfile />
         </Route>
         <Route path="/">
-          <HomePage user={user} />
+          <HomePage userDataInfo={userDataInfo} />
         </Route>
       </Switch>
     </Router>
@@ -51,12 +51,11 @@ export default function App() {
     setContacts([...contacts, contactItem])
     localStorage.setItem(
       'savedContact',
-      JSON.stringify([...contacts, contactItem])  
-    )}
+      JSON.stringify([...contacts, contactItem])
+    )
+  }
   function addUser(userDataItem) {
     setUserData([userDataItem])
-    localStorage.setItem(
-      'savedUserData',
-       JSON.stringify([userDataItem])
-       )}
+    localStorage.setItem('savedUserData', JSON.stringify([userDataItem]))
+  }
 }
