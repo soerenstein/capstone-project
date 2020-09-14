@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function UserProfileForm({ onSubmit, handleSubmit }) {
+export default function UserProfileForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
 
