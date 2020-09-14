@@ -1,9 +1,9 @@
 import React from 'react'
-import CreateContact from './CreateContact'
+import CreateContactForm from './CreateContactForm'
 
 export default {
-    title: 'CreateContact',
-    component: CreateContact,
+    title: 'CreateContactForm',
+    component: CreateContactForm,
 }
 
-export const Form = () => <CreateContact />
+export const Form = () => <CreateContactForm />
