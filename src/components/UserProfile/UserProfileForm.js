@@ -57,7 +57,17 @@ export default function UserProfileForm({ onSubmit }) {
           E-Mail
           <input name="mail" id="mail" required />
         </LabelStyled>
-
+        <LabelStyled htmlFor="url">
+          Website
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="https://example.com"
+            size="30"
+            required
+          />
+        </LabelStyled>
         <LabelStyled htmlFor="street">
           Adresse
           <input
@@ -112,6 +122,7 @@ export default function UserProfileForm({ onSubmit }) {
       street: form.street.value,
       zip: form.zip.value,
       city: form.city.value,
+      url: form.url.value, 
       id: uuidv4(),
     }
     onSubmit(userDataItem)

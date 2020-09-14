@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react'
 import styled from 'styled-components/macro'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import ShareUserProfile from '../ShareProfile/ShareUserProfile'
 
 export default function UserProfileContent({ userDataInfo }) {
   const {
@@ -12,36 +13,41 @@ export default function UserProfileContent({ userDataInfo }) {
     street,
     zip,
     city,
+    url,
   } = userDataInfo
 
   return (
-    <ProfileWrapper>
-      <NameStyled>{firstName + ' ' + lastName}</NameStyled>
-      <CompanyStyled>{company}</CompanyStyled>
-      <DetailListStyled>
-        <DetailItemHeading>Kontaktdaten</DetailItemHeading>
-        <DetailItemContainer>
-          <DetailItemContent>T: {phone}</DetailItemContent>
-          <DetailItemContent>M: {mail}</DetailItemContent>
-        </DetailItemContainer>
-        <DetailItemHeading>Adresse</DetailItemHeading>
-        <DetailItemContainer>
-          <DetailItemContent>{street}</DetailItemContent>
-          <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
-        </DetailItemContainer>
-      </DetailListStyled>
-      <Link to="/edit-user">
-        <EditButton to="/edit-user">Bearbeiten</EditButton>
+    <>
+      <ShareUserProfile userDataInfo={userDataInfo} />
+      <ProfileWrapper>
+        <NameStyled>{firstName + ' ' + lastName}</NameStyled>
+        <CompanyStyled>{company}</CompanyStyled>
+        <DetailListStyled>
+          <DetailItemHeading>Kontaktdaten</DetailItemHeading>
+          <DetailItemContainer>
+            <DetailItemContent>T: {phone}</DetailItemContent>
+            <DetailItemContent>M: {mail}</DetailItemContent>
+            <DetailItemContent>W: {url} </DetailItemContent>
+          </DetailItemContainer>
+          <DetailItemHeading>Adresse</DetailItemHeading>
+          <DetailItemContainer>
+            <DetailItemContent>{street}</DetailItemContent>
+            <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
+          </DetailItemContainer>
+        </DetailListStyled>
+        <Link to="/edit-user">
+          <EditButton to="/edit-user">Bearbeiten</EditButton>
         </Link>
-    </ProfileWrapper>
+      </ProfileWrapper>
+    </>
   )
 }
 
 const ProfileWrapper = styled.div`
-  position: absolute;
+  position: static;
   left: 15px;
   right: 15px;
-  bottom: 0; 
+  bottom: 0;
   margin: 0 auto;
   padding: 10px;
   background: rgb(255, 171, 29);
@@ -90,5 +96,4 @@ const DetailItemContent = styled.p`
   margin: 10px 0;
 `
 
-const EditButton = styled.button`
-`
+const EditButton = styled.button``
