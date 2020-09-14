@@ -79,7 +79,7 @@ export default function UserProfileForm({ onSubmit }) {
           </LabelWrapper>
         </LabelStyled>
         <SubmitButton id="submit" disabled={disabledButton}>
-          Kontakt hinzufügen
+          Speichern
         </SubmitButton>
       </FormStyled>
     </div>
