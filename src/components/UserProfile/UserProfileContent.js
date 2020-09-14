@@ -38,9 +38,10 @@ export default function UserProfileContent({ userDataInfo }) {
 }
 
 const ProfileWrapper = styled.div`
-  position: sticky;
+  position: absolute;
   left: 15px;
   right: 15px;
+  bottom: 0; 
   margin: 0 auto;
   padding: 10px;
   background: rgb(255, 171, 29);

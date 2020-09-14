@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
+import { useHistory } from 'react-router-dom'
 
 export default function UserProfileForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
-
+  const history = useHistory()
   const disabledButton = !firstName && !lastName
 
   return (
@@ -115,8 +116,7 @@ export default function UserProfileForm({ onSubmit }) {
     }
     onSubmit(userDataItem)
     form.reset()
-    form[0] && form[0].focus()
-    
+    history.push('/user-profile')
   }
 }
 
