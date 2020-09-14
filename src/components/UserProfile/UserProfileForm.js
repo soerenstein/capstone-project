@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 
-export default function UserProfileForm({ onSubmit }) {
+export default function UserProfileForm({ onSubmit, handleSubmit }) {
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
 
@@ -59,10 +59,22 @@ export default function UserProfileForm({ onSubmit }) {
 
         <LabelStyled htmlFor="street">
           Adresse
-          <input name="zip" type="text" id="street" placeholder="Straße" required />
+          <input
+            name="zip"
+            type="text"
+            id="street"
+            placeholder="Straße"
+            required
+          />
           <LabelWrapper>
             <input name="zip" type="text" id="zip" placeholder="PLZ" required />
-            <input name="city" type="text" id="city" placeholder="Stadt" required />
+            <input
+              name="city"
+              type="text"
+              id="city"
+              placeholder="Stadt"
+              required
+            />
           </LabelWrapper>
         </LabelStyled>
         <SubmitButton id="submit" disabled={disabledButton}>
@@ -104,6 +116,7 @@ export default function UserProfileForm({ onSubmit }) {
     onSubmit(userDataItem)
     form.reset()
     form[0] && form[0].focus()
+    
   }
 }
 
@@ -122,4 +135,5 @@ const LabelStyled = styled.label`
   display: grid;
   gap: 10px;
 `
+
 const SubmitButton = styled.button``
