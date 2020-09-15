@@ -114,6 +114,7 @@ const FormStyled = styled.form`
   display: grid;
   gap: 10px;
   padding: 20px;
+  margin-top: 60px; 
 `
 const LabelWrapper = styled.div`
   display: grid;

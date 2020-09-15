@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ContactList from './components/ContactList/ContactList'
-import CreateContactForm from './components/CreateContactForm/CreateContactForm'
 import ContactProfile from './components/ContactProfile/ContactProfile'
 import HomePage from './components/HomePage/HomePage'
 import UserProfile from './components/UserProfile/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
+import CreateContact from './components/CreateContactForm/CreateContact'
 
 export default function App() {
   const [contacts, setContacts] = useState(
@@ -30,9 +30,9 @@ export default function App() {
         <Route path="/edit-user">
           <UserProfileForm onSubmit={addUser} />
         </Route>
-        <Route path="/favorites"></Route>
+        <Route path="/favorites">Coming soon</Route>
         <Route path="/create">
-          <CreateContactForm onSubmit={addContact} />
+          <CreateContact onSubmit={addContact} />
         </Route>
         <Route path="/list">
           <ContactList contacts={contacts} />

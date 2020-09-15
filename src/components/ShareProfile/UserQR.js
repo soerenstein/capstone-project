@@ -45,5 +45,6 @@ export default function UserQR({ user }) {
 const QRStyled = styled.section`
 display: flex; 
 justify-content: center; 
+margin-top: 60px; 
 
 `
