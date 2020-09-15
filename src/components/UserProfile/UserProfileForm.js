@@ -57,7 +57,17 @@ export default function UserProfileForm({ onSubmit }) {
           E-Mail
           <input name="mail" id="mail" required />
         </LabelStyled>
-
+        <LabelStyled htmlFor="url">
+          Website
+          <input
+            type="url"
+            name="url"
+            id="url"
+            placeholder="https://example.com"
+            size="30"
+            required
+          />
+        </LabelStyled>
         <LabelStyled htmlFor="street">
           Adresse
           <input
@@ -78,9 +88,9 @@ export default function UserProfileForm({ onSubmit }) {
             />
           </LabelWrapper>
         </LabelStyled>
-        <SubmitButton id="submit" disabled={disabledButton}>
+        <button id="submit" disabled={disabledButton}>
           Speichern
-        </SubmitButton>
+        </button>
       </FormStyled>
     </div>
   )
@@ -103,7 +113,7 @@ export default function UserProfileForm({ onSubmit }) {
   function handleSubmit(event) {
     event.preventDefault()
     const form = event.target
-    const userDataItem = {
+    const userItem = {
       firstName: form.firstName.value,
       lastName: form.lastName.value,
       company: form.company.value,
@@ -112,9 +122,10 @@ export default function UserProfileForm({ onSubmit }) {
       street: form.street.value,
       zip: form.zip.value,
       city: form.city.value,
+      url: form.url.value, 
       id: uuidv4(),
     }
-    onSubmit(userDataItem)
+    onSubmit(userItem)
     form.reset()
     history.push('/user-profile')
   }
@@ -135,5 +146,3 @@ const LabelStyled = styled.label`
   display: grid;
   gap: 10px;
 `
-
-const SubmitButton = styled.button``
