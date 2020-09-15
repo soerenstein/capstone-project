@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import WelcomeUser from './WelcomeUser'
-import TopLeftCard from '../Design/CardWrapper/TopLeftCard'
 import NavButton from './NavButton'
+import TopLeftCard from '../Design/CardWrapper/TopLeftCard'
 
 export default function HomePage({ user }) {
   return (

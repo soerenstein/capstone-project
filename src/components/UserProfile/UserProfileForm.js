@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { v4 as uuidv4 } from 'uuid'
 import { useHistory } from 'react-router-dom'
+import Header from '../Header/Header'
 
 export default function UserProfileForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
@@ -11,6 +12,7 @@ export default function UserProfileForm({ onSubmit }) {
 
   return (
     <div>
+      <Header />
       <FormStyled onSubmit={handleSubmit}>
         <LabelWrapper>
           <LabelStyled htmlFor="firstName">
@@ -135,6 +137,7 @@ const FormStyled = styled.form`
   display: grid;
   gap: 10px;
   padding: 20px;
+  margin-top: 60px; 
 `
 const LabelWrapper = styled.div`
   display: grid;

@@ -12,9 +12,8 @@ describe('The form', () => {
 
 describe('The button', () => {
     it('renders correctly', () => {
-        const {getByText} = render(<CreateContact  />);  
+        const {getByText} = render(<CreateContact />);  
         expect(getByText('Kontakt hinzufügen')).toBeInTheDocument()
         
      })
 })
-

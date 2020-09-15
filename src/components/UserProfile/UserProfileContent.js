@@ -48,7 +48,6 @@ const Wrapper = styled.div`
   left: 15px;
   right: 15px;
   bottom: 0;
-  margin: 0 auto;
   padding: 10px;
   background: rgb(255, 171, 29);
   background: linear-gradient(
