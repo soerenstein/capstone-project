@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
-export default function WelcomeUser({ userDataInfo }) {
-  const { firstName } = userDataInfo
+export default function WelcomeUser({ user }) {
+  const { firstName } = user
 
   return (
     <WelcomeWrapper>

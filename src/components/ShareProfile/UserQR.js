@@ -2,7 +2,7 @@ import React from 'react'
 import qrCode from 'qr-code-and-vcard/dist/QrCode'
 import styled from 'styled-components/macro'
 
-export default function ShareUserProfile({ userDataInfo }) {
+export default function UserQR({ user }) {
   const {
     firstName,
     lastName,
@@ -13,12 +13,12 @@ export default function ShareUserProfile({ userDataInfo }) {
     zip,
     city,
     url,
-  } = userDataInfo
+  } = user
 
   const contactCardInfo = {
     version: '3.0',
-    lastName: lastName,
-    firstName: firstName,
+    lastName,
+    firstName,
     organization: company,
     workPhone: phone,
     workEmail: mail,

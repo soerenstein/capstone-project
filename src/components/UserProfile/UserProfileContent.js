@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 import { Link } from 'react-router-dom'
-import ShareUserProfile from '../ShareProfile/ShareUserProfile'
+import UserQR from '../ShareProfile/UserQR'
 
-export default function UserProfileContent({ userDataInfo }) {
+export default function UserProfileContent({ user }) {
   const {
     firstName,
     lastName,
@@ -14,36 +14,36 @@ export default function UserProfileContent({ userDataInfo }) {
     zip,
     city,
     url,
-  } = userDataInfo
+  } = user
 
   return (
     <>
-      <ShareUserProfile userDataInfo={userDataInfo} />
-      <ProfileWrapper>
+      <UserQR user={user} />
+      <Wrapper>
         <NameStyled>{firstName + ' ' + lastName}</NameStyled>
         <CompanyStyled>{company}</CompanyStyled>
-        <DetailListStyled>
-          <DetailItemHeading>Kontaktdaten</DetailItemHeading>
-          <DetailItemContainer>
-            <DetailItemContent>T: {phone}</DetailItemContent>
-            <DetailItemContent>M: {mail}</DetailItemContent>
-            <DetailItemContent>W: {url} </DetailItemContent>
-          </DetailItemContainer>
-          <DetailItemHeading>Adresse</DetailItemHeading>
-          <DetailItemContainer>
-            <DetailItemContent>{street}</DetailItemContent>
-            <DetailItemContent>{zip + ' ' + city}</DetailItemContent>
-          </DetailItemContainer>
-        </DetailListStyled>
+        <ListStyled>
+          <HeadingStyled>Kontaktdaten</HeadingStyled>
+          <DataContainer>
+            <DataContent>T: {phone}</DataContent>
+            <DataContent>M: {mail}</DataContent>
+            <DataContent>W: {url} </DataContent>
+          </DataContainer>
+          <HeadingStyled>Adresse</HeadingStyled>
+          <DataContainer>
+            <DataContent>{street}</DataContent>
+            <DataContent>{zip + ' ' + city}</DataContent>
+          </DataContainer>
+        </ListStyled>
         <Link to="/edit-user">
-          <EditButton to="/edit-user">Bearbeiten</EditButton>
+          <button to="/edit-user">Bearbeiten</button>
         </Link>
-      </ProfileWrapper>
+      </Wrapper>
     </>
   )
 }
 
-const ProfileWrapper = styled.div`
+const Wrapper = styled.div`
   position: static;
   left: 15px;
   right: 15px;
@@ -74,26 +74,24 @@ const CompanyStyled = styled.h3`
   margin: 5px 0;
 `
 
-const DetailListStyled = styled.ul`
+const ListStyled = styled.ul`
   list-style: none;
   padding: 0;
 `
 
-const DetailItemContainer = styled.div`
+const DataContainer = styled.div`
   background: white;
   border-radius: 30px;
   padding: 10px 0 10px 30px;
 `
 
-const DetailItemHeading = styled.h4`
+const HeadingStyled = styled.h4`
   color: white;
   margin: 5px 0 5px 0;
   padding-left: 30px;
   padding-top: 10px;
 `
 
-const DetailItemContent = styled.p`
+const DataContent = styled.p`
   margin: 10px 0;
 `
-
-const EditButton = styled.button``
