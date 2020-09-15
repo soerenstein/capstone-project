@@ -2,20 +2,24 @@ import React from 'react'
 import { ReactComponent as Arrow } from '../Design/img/arrow-left.svg'
 import { ReactComponent as Heart } from '../Design/img/heart.svg'
 import { ReactComponent as Profile } from '../Design/img/user-header.svg'
+import { ReactComponent as Create } from '../Design/img/user-plus.svg'
 import styled from 'styled-components/macro'
-import { useHistory, Link } from 'react-router-dom'
+import { useHistory, Link, NavLink } from 'react-router-dom'
 
 export default function Header() {
   const history = useHistory()
   return (
     <div>
       <ArrowStyled onClick={handleClick} />
-      <Link to="/favorites">
+      <NavLink to="/favorites" activeStyle={{fill: '#FFAB1D'}}>
         <FavoriteStyled />
-      </Link>
-      <Link to="/user-profile">
+      </NavLink>
+      <NavLink to="/user-profile" activeStyle={{fill: '#FFAB1D'}}>
         <ProfileStyled />
-      </Link>
+      </NavLink>
+      <NavLink to="/create" activeStyle={{fill: '#FFAB1D' }} >
+        <CreateStyled />
+      </NavLink>
     </div>
   )
   function handleClick() {
@@ -31,12 +35,19 @@ const ArrowStyled = styled(Arrow)`
 
 const FavoriteStyled = styled(Heart)`
   position: absolute;
-  right: 60px;
+  right: 80px;
   top: 20px;
 `
 
 const ProfileStyled = styled(Profile)`
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 20px;
+`
+
+const CreateStyled = styled(Create)`
+  position: absolute; 
+  right: 140px; 
+  top: 20px; 
+
 `

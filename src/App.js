@@ -6,6 +6,7 @@ import HomePage from './components/HomePage/HomePage'
 import UserProfile from './components/UserProfile/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
 import CreateContact from './components/CreateContactForm/CreateContact'
+import Header from './components/Header/Header'
 
 export default function App() {
   const [contacts, setContacts] = useState(
@@ -20,6 +21,9 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/">
+          <HomePage user={user} />
+        </Route>
         <Route path="/user-profile">
           {localStorage.getItem('savedUser') !== null ? (
             <UserProfile user={user} />
@@ -30,7 +34,9 @@ export default function App() {
         <Route path="/edit-user">
           <UserProfileForm onSubmit={addUser} />
         </Route>
-        <Route path="/favorites">Coming soon</Route>
+        <Route path="/favorites">
+          <Header />
+        </Route>
         <Route path="/create">
           <CreateContact onSubmit={addContact} />
         </Route>
@@ -39,9 +45,6 @@ export default function App() {
         </Route>
         <Route path="/profile">
           <ContactProfile />
-        </Route>
-        <Route path="/">
-          <HomePage user={user} />
         </Route>
       </Switch>
     </Router>
