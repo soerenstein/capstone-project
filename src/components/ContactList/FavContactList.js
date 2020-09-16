@@ -1,21 +1,21 @@
 import React from 'react'
-import styled from 'styled-components/macro'
 import ContactListItem from '../ContactListItem/ContactListItem'
-import Header from '../Header/Header'
 import { useHistory } from 'react-router-dom'
+import Header from '../Header/Header'
+import styled from 'styled-components/macro'
 
-export default function ContactList({ contacts }) {
+export default function FavContactList({ favorites, onClick }) {
   const history = useHistory()
 
   return (
     <>
       <Header />
       <StyledList>
-        {contacts.map((contact) => (
+        {favorites.map((favorite) => (
           <ContactListItem
-            onClick={() => history.push(`/${contact.id}`)}
-            key={contact.id}
-            {...contact}
+            onClick={() => history.push(`/${favorite.id}`)}
+            key={favorite.id}
+            {...favorite}
           />
         ))}
       </StyledList>

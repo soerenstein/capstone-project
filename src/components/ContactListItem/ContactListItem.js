@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as UserIcon } from '../Design/img/user.svg'
 
-export default function ContactListItem({ firstName, lastName, company, id }) {
+export default function ContactListItem({ firstName, lastName, company, id, onClick }) {
   return (
     <li key={id}>
-      <ContactContainer>
+      <ContactContainer onClick={onClick}>
         <SVGWrapper>
           <UserIcon />
         </SVGWrapper>

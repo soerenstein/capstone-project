@@ -9,7 +9,7 @@ import { useHistory, Link, NavLink } from 'react-router-dom'
 export default function Header() {
   const history = useHistory()
   return (
-    <div>
+    <HeaderWrapper>
       <ArrowStyled onClick={handleClick} />
       <NavLink to="/favorites" activeStyle={{fill: '#FFAB1D'}}>
         <FavoriteStyled />
@@ -20,12 +20,16 @@ export default function Header() {
       <NavLink to="/create" activeStyle={{fill: '#FFAB1D' }} >
         <CreateStyled />
       </NavLink>
-    </div>
+    </HeaderWrapper>
   )
   function handleClick() {
     history.goBack()
   }
 }
+
+const HeaderWrapper = styled.div`
+display: block; 
+`
 
 const ArrowStyled = styled(Arrow)`
   position: absolute;
