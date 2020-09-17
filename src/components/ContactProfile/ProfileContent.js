@@ -12,6 +12,7 @@ export default function ProfileContent({
 
   let { id } = useParams()
   let contactById = contacts.find((a) => a.id === id)
+
   const {
     firstName,
     lastName,
@@ -25,9 +26,9 @@ export default function ProfileContent({
     note,
   } = contactById || contacts
 
-  // const isFavored = favorites.find(
-  //   (favoriteItem) => favoriteItem.id === favorites.id
-  // )
+  const isFavored = favorites.find(
+    (favorites) => contactById.id === favorites.id
+  )
 
   return (
     <ProfileWrapper>
@@ -60,8 +61,9 @@ export default function ProfileContent({
           </DetailItemContainer>
         ) : null}
       </DetailListStyled>
+
       <button onClick={() => onFavoriteClick(contactById)}>
-        Zu Favoriten hinzufügen
+        {isFavored ? 'Aus Favoriten entfernen' : 'Zu Favoriten hinzufügen'}
       </button>
     </ProfileWrapper>
   )
