@@ -4,13 +4,14 @@ import { ReactComponent as Heart } from '../Design/img/heart.svg'
 import { ReactComponent as Profile } from '../Design/img/user-header.svg'
 import { ReactComponent as Create } from '../Design/img/user-plus.svg'
 import styled from 'styled-components/macro'
-import { useHistory, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
-  const history = useHistory()
   return (
     <HeaderWrapper>
-      <ArrowStyled onClick={handleClick} />
+      <NavLink to="/">
+        <ArrowStyled />
+      </NavLink>
       <NavLink to="/favorites" activeStyle={{ fill: '#FFAB1D' }}>
         <FavoriteStyled />
       </NavLink>
@@ -22,9 +23,6 @@ export default function Header() {
       </NavLink>
     </HeaderWrapper>
   )
-  function handleClick() {
-    history.goBack()
-  }
 }
 
 const HeaderWrapper = styled.div`
