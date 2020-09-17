@@ -8,7 +8,7 @@ export default function TopLeftCard() {
 const StyledTopCard = styled.div`
   position: absolute;
   top: 0;
-  left: 0px;
+  left: 0;
   right: 50px;
   margin: 0 auto;
   padding: 10px;

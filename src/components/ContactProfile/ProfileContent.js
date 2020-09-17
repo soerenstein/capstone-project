@@ -23,11 +23,11 @@ export default function ProfileContent({
     city,
     category,
     note,
-  } = contactById
+  } = contactById || contacts
 
-  const isFavored = favorites.find(
-    (favoriteItem) => favoriteItem.id === favorites.id
-  )
+  // const isFavored = favorites.find(
+  //   (favoriteItem) => favoriteItem.id === favorites.id
+  // )
 
   return (
     <ProfileWrapper>
@@ -60,7 +60,7 @@ export default function ProfileContent({
           </DetailItemContainer>
         ) : null}
       </DetailListStyled>
-      <button favored={isFavored} onClick={() => onFavoriteClick(contactById)}>
+      <button onClick={() => onFavoriteClick(contactById)}>
         Zu Favoriten hinzufügen
       </button>
     </ProfileWrapper>

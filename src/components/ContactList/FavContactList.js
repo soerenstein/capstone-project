@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import Header from '../Header/Header'
 import styled from 'styled-components/macro'
 
-export default function FavContactList({ favorites, onClick }) {
+export default function FavContactList({ favorites }) {
   const history = useHistory()
 
   return (
