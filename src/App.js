@@ -5,8 +5,8 @@ import HomePage from './components/HomePage/HomePage'
 import UserProfile from './components/UserProfile/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
 import CreateContact from './components/CreateContactForm/CreateContact'
-import NoContact from './components/ContactList/NoContact'
-import NoFavorite from './components/ContactList/NoFavorite'
+import ZeroContacts from './components/ContactList/ZeroContacts'
+import ZeroFavorites from './components/ContactList/ZeroFavorites'
 import ContactProfile from './components/ContactProfile/ContactProfile'
 import FavContactList from './components/ContactList/FavContactList'
 import useContacts from './hooks/useContacts'
@@ -38,7 +38,7 @@ export default function App() {
           {favorites.length ? (
             <FavContactList favorites={favorites} />
           ) : (
-            <NoFavorite />
+            <ZeroFavorites />
           )}
         </Route>
         <Route path="/create">
@@ -48,7 +48,7 @@ export default function App() {
           {contacts.length ? (
             <ContactList contacts={contacts} />
           ) : (
-            <NoContact />
+            <ZeroContacts />
           )}
         </Route>
         <Route path="/:id">

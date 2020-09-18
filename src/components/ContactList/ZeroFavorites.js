@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-export default function NoFavorite() {
+export default function ZeroFavorites() {
   return (
     <>
       <Header />
