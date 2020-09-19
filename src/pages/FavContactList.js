@@ -8,7 +8,6 @@ import useFavorites from '../hooks/useFavorites'
 
 export default function FavContactList() {
   const [favorites] = useFavorites()
-
   const history = useHistory()
 
   return (

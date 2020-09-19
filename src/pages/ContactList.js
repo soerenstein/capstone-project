@@ -7,7 +7,7 @@ import ZeroContacts from '../components/ContactList/ZeroContacts'
 import useContacts from '../hooks/useContacts'
 
 export default function ContactList() {
-  const [contacts, addContact] = useContacts()
+  const [contacts] = useContacts()
   const history = useHistory()
 
   return (
