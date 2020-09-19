@@ -24,21 +24,21 @@ describe('The profile', () => {
   })
 })
 
-// describe('The heading', () => {
-//   it('for contact information renders correctly', () => {
-//     const { getByText } = render(<ContactProfile />)
-//     expect(getByText('Kontaktdaten')).toBeInTheDocument()
-//   })
-//   it('for adress renders correctly', () => {
-//     const { getByText } = render(<ContactProfile />)
-//     expect(getByText('Adresse')).toBeInTheDocument()
-//   })
-//   it('for category renders correctly', () => {
-//     const { getByText } = render(<ContactProfile />)
-//     expect(getByText('Kategorie')).toBeInTheDocument()
-//   })
-//   it('for notes renders correctly', () => {
-//     const { getByText } = render(<ContactProfile />)
-//     expect(getByText('Notiz')).toBeInTheDocument()
-//   })
-// })
+describe('The heading', () => {
+  it('for contact information renders correctly', () => {
+    const { getByText } = render(<ContactProfile />)
+    expect(getByText('Kontaktdaten')).toBeInTheDocument()
+  })
+  it('for adress renders correctly', () => {
+    const { getByText } = render(<ContactProfile />)
+    expect(getByText('Adresse')).toBeInTheDocument()
+  })
+  it('for category renders correctly', () => {
+    const { getByText } = render(<ContactProfile />)
+    expect(getByText('Kategorie')).toBeInTheDocument()
+  })
+  it('for notes renders correctly', () => {
+    const { getByText } = render(<ContactProfile />)
+    expect(getByText('Notiz')).toBeInTheDocument()
+  })
+})
