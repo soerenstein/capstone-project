@@ -3,22 +3,30 @@ import ContactListItem from '../components/ContactListItem/ContactListItem'
 import { useHistory } from 'react-router-dom'
 import Header from '../components/Header/Header'
 import styled from 'styled-components/macro'
+import ZeroFavorites from '../components/ContactList/ZeroFavorites'
+import useFavorites from '../hooks/useFavorites'
 
-export default function FavContactList({ favorites }) {
+export default function FavContactList() {
+  const [favorites] = useFavorites()
+
   const history = useHistory()
 
   return (
     <>
       <Header />
-      <StyledList>
-        {favorites.map((favorite) => (
-          <ContactListItem
-            onClick={() => history.push(`/${favorite.id}`)}
-            key={favorite.id}
-            {...favorite}
-          />
-        ))}
-      </StyledList>
+      {favorites.length ? (
+        <StyledList>
+          {favorites.map((favorite) => (
+            <ContactListItem
+              onClick={() => history.push(`/${favorite.id}`)}
+              key={favorite.id}
+              {...favorite}
+            />
+          ))}
+        </StyledList>
+      ) : (
+        <ZeroFavorites />
+      )}
     </>
   )
 }

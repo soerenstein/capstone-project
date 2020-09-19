@@ -1,12 +1,19 @@
 import React from 'react'
 import Header from '../components/Header/Header'
 import UserProfileContent from '../components/UserProfile/UserProfileContent'
+import UserProfileForm from '../components/UserProfile/UserProfileForm'
+import useUser from '../hooks/useUser'
 
-export default function UserProfile({ user }) {
+export default function UserProfile({ user, onSubmit }) {
+  const [savedUser] = useUser()
   return (
     <>
       <Header />
-      <UserProfileContent user={user} />
+      {savedUser ? (
+        <UserProfileContent user={user} />
+      ) : (
+        <UserProfileForm onSubmit={onSubmit} />
+      )}
     </>
   )
 }

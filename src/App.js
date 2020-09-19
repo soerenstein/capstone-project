@@ -6,7 +6,6 @@ import UserProfile from './pages/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
 import CreateContact from './pages/CreateContact'
 import ZeroContacts from './components/ContactList/ZeroContacts'
-import ZeroFavorites from './components/ContactList/ZeroFavorites'
 import ContactProfile from './pages/ContactProfile'
 import FavContactList from './pages/FavContactList'
 import useContacts from './hooks/useContacts'
@@ -21,35 +20,20 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <HomePage user={savedUser} />
-        </Route>
         <Route path="/user-profile">
-          {savedUser ? (
-            <UserProfile user={savedUser} />
-          ) : (
-            <UserProfileForm onSubmit={addUser} />
-          )}
+          <UserProfile onSubmit={addUser} user={savedUser} />
         </Route>
         <Route path="/edit-user">
           <UserProfileForm onSubmit={addUser} />
         </Route>
         <Route path="/favorites">
-          {favorites.length ? (
-            <FavContactList favorites={favorites} />
-          ) : (
-            <ZeroFavorites />
-          )}
+          <FavContactList favorites={favorites} />
         </Route>
         <Route path="/create">
           <CreateContact onSubmit={addContact} />
         </Route>
         <Route path="/list">
-          {contacts.length ? (
-            <ContactList contacts={contacts} />
-          ) : (
-            <ZeroContacts />
-          )}
+          <ContactList />
         </Route>
         <Route path="/:id">
           <ContactProfile
@@ -57,6 +41,9 @@ export default function App() {
             onFavoriteClick={toggleFavorite}
             favorites={favorites}
           />
+        </Route>
+        <Route exact path="/">
+          <HomePage user={savedUser} />
         </Route>
       </Switch>
     </Router>

@@ -7,6 +7,7 @@ import styled from 'styled-components/macro'
 import { NavLink, BrowserRouter } from 'react-router-dom'
 
 export default function Header() {
+
   return (
     <HeaderWrapper>
       <BrowserRouter>
