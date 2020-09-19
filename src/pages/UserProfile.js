@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Header/Header'
-import UserProfileContent from './UserProfileContent'
+import Header from '../components/Header/Header'
+import UserProfileContent from '../components/UserProfile/UserProfileContent'
 
 export default function UserProfile({ user }) {
   return (
@@ -10,4 +10,3 @@ export default function UserProfile({ user }) {
     </>
   )
 }
-

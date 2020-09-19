@@ -8,17 +8,16 @@ export default function ZeroFavorites() {
     <>
       <Header />
       <ListWrapper>
-      <p>Es sind keine Favoriten vorhanden.</p>
-      <NavLink to="/list">
-        <button>Zur Kontaktliste</button>
-      </NavLink>
-    </ListWrapper>
-</>
+        <p>Es sind keine Favoriten vorhanden.</p>
+        <NavLink to="/list">
+          <button>Zur Kontaktliste</button>
+        </NavLink>
+      </ListWrapper>
+    </>
   )
 }
 
 const ListWrapper = styled.div`
-    display: grid; 
-    margin-top: 50px; 
+  display: grid;
+  margin-top: 50px;
 `
-

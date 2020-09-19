@@ -4,23 +4,25 @@ import { ReactComponent as Heart } from '../Design/img/heart.svg'
 import { ReactComponent as Profile } from '../Design/img/user-header.svg'
 import { ReactComponent as Create } from '../Design/img/user-plus.svg'
 import styled from 'styled-components/macro'
-import { NavLink } from 'react-router-dom'
+import { NavLink, BrowserRouter } from 'react-router-dom'
 
 export default function Header() {
   return (
     <HeaderWrapper>
-      <NavLink to="/">
-        <ArrowStyled />
-      </NavLink>
-      <NavLink to="/favorites" activeStyle={{ fill: '#FFAB1D' }}>
-        <FavoriteStyled />
-      </NavLink>
-      <NavLink to="/user-profile" activeStyle={{ fill: '#FFAB1D' }}>
-        <ProfileStyled />
-      </NavLink>
-      <NavLink to="/create" activeStyle={{ fill: '#FFAB1D' }}>
-        <CreateStyled />
-      </NavLink>
+      <BrowserRouter>
+        <NavLink to="/">
+          <ArrowStyled id="back" />
+        </NavLink>
+        <NavLink to="/favorites" activeStyle={{ fill: '#FFAB1D' }}>
+          <FavoriteStyled />
+        </NavLink>
+        <NavLink to="/user-profile" activeStyle={{ fill: '#FFAB1D' }}>
+          <ProfileStyled />
+        </NavLink>
+        <NavLink to="/create" activeStyle={{ fill: '#FFAB1D' }}>
+          <CreateStyled />
+        </NavLink>
+      </BrowserRouter>
     </HeaderWrapper>
   )
 }

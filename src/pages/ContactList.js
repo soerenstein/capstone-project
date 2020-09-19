@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import ContactListItem from '../ContactListItem/ContactListItem'
-import Header from '../Header/Header'
+import ContactListItem from '../components/ContactListItem/ContactListItem'
+import Header from '../components/Header/Header'
 import { useHistory } from 'react-router-dom'
 
 export default function ContactList({ contacts }) {

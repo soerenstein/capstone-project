@@ -1,6 +1,6 @@
 import React from 'react'
-import ProfileContent from './ProfileContent'
-import Header from '../Header/Header'
+import ProfileContent from '../components/ContactProfile/ProfileContent'
+import Header from '../components/Header/Header'
 
 export default function ContactProfile({
   contacts,

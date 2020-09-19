@@ -1,7 +1,7 @@
 import React from 'react'
-import ContactListItem from '../ContactListItem/ContactListItem'
+import ContactListItem from '../components/ContactListItem/ContactListItem'
 import { useHistory } from 'react-router-dom'
-import Header from '../Header/Header'
+import Header from '../components/Header/Header'
 import styled from 'styled-components/macro'
 
 export default function FavContactList({ favorites }) {

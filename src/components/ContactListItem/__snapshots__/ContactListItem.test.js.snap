@@ -5,51 +5,47 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <li>
-        <section
-          class="ContactListItem__ContactContainer-q0ui6m-0 cZncpw"
-        >
-          <section
-            class="ContactListItem__SVGWrapper-q0ui6m-1 CAeIO"
-          >
-            <svg>
-              user.svg
-            </svg>
-          </section>
-          <p
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 LyweK"
-          >
-            undefined undefined
-          </p>
-          <p
-            class="ContactListItem__StyledContactInformation-q0ui6m-2 LyweK"
-          />
-        </section>
-      </li>
-    </div>
-  </body>,
-  "container": <div>
-    <li>
-      <section
-        class="ContactListItem__ContactContainer-q0ui6m-0 cZncpw"
+      <div
+        class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
       >
-        <section
-          class="ContactListItem__SVGWrapper-q0ui6m-1 CAeIO"
+        <div
+          class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
         >
           <svg>
             user.svg
           </svg>
-        </section>
+        </div>
         <p
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 LyweK"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
         >
           undefined undefined
         </p>
         <p
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 LyweK"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
         />
-      </section>
-    </li>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+    >
+      <div
+        class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
+      >
+        <svg>
+          user.svg
+        </svg>
+      </div>
+      <p
+        class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+      >
+        undefined undefined
+      </p>
+      <p
+        class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+      />
+    </div>
   </div>,
   "debug": [Function],
   "findAllByAltText": [Function],

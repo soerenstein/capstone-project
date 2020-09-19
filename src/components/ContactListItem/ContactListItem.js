@@ -2,16 +2,22 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as UserIcon } from '../Design/img/user.svg'
 
-export default function ContactListItem({ firstName, lastName, company, id, onClick }) {
+export default function ContactListItem({
+  firstName,
+  lastName,
+  company,
+  id,
+  onClick,
+}) {
   return (
     <ContactContainer key={id} onClick={onClick}>
-        <SVGWrapper>
-          <UserIcon />
-        </SVGWrapper>
-        <StyledContactInformation>
-          {firstName + ' ' + lastName}
-        </StyledContactInformation>
-        <StyledContactInformation>{company}</StyledContactInformation>
+      <SVGWrapper>
+        <UserIcon />
+      </SVGWrapper>
+      <StyledContactInformation>
+        {firstName + ' ' + lastName}
+      </StyledContactInformation>
+      <StyledContactInformation>{company}</StyledContactInformation>
     </ContactContainer>
   )
 }
@@ -26,7 +32,7 @@ const ContactContainer = styled.div`
   border-radius: 10px;
   box-shadow: 8px 6px 20px -10px rgba(128, 128, 128, 1);
 `
-const SVGWrapper = styled.section`
+const SVGWrapper = styled.div`
   grid-column: 1;
   grid-row: 1 / 3;
   justify-self: center;

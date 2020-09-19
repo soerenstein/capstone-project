@@ -62,7 +62,7 @@ export default function ProfileContent({
         ) : null}
       </DetailListStyled>
 
-      <button onClick={() => onFavoriteClick(contactById)}>
+      <button id="favoriteButton" onClick={() => onFavoriteClick(contactById)}>
         {isFavored ? 'Aus Favoriten entfernen' : 'Zu Favoriten hinzufügen'}
       </button>
     </ProfileWrapper>

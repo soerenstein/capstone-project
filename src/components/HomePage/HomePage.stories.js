@@ -1,14 +1,19 @@
 import React from 'react'
-import HomePage from './HomePage'
+import HomePage from '../../pages/HomePage'
 
 export default {
   title: 'HomePage',
   component: HomePage,
 }
 
-const HomeNav = (args) => <HomePage {...args} />
+const HomeNavUser = (args) => <HomePage {...args} />
 
-export const HomeNavigation = HomeNav.bind({})
-HomeNavigation.args = {
+export const HomeWithUser = HomeNavUser.bind({})
+HomeWithUser.args = {
   user: { firstName: 'Maxi' },
 }
+
+const HomeNavNoUser = (args) => <HomePage {...args} />
+
+export const HomeWithoutUser = HomeNavNoUser.bind({})
+HomeWithoutUser.args = {}
