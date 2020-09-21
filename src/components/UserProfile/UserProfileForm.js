@@ -73,7 +73,7 @@ export default function UserProfileForm({ onSubmit }) {
         <LabelStyled htmlFor="street">
           Adresse
           <input
-            name="zip"
+            name="street"
             type="text"
             id="street"
             placeholder="Straße"

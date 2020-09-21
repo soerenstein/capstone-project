@@ -2,10 +2,9 @@ import React from 'react'
 import styled from 'styled-components/macro'
 import { ReactComponent as UserIcon } from '../Design/img/user.svg'
 
-export default function ContactListItem({ firstName, lastName, company, id }) {
+export default function ContactListItem({ firstName, lastName, company, id, onClick }) {
   return (
-    <li key={id}>
-      <ContactContainer>
+    <ContactContainer key={id} onClick={onClick}>
         <SVGWrapper>
           <UserIcon />
         </SVGWrapper>
@@ -13,12 +12,11 @@ export default function ContactListItem({ firstName, lastName, company, id }) {
           {firstName + ' ' + lastName}
         </StyledContactInformation>
         <StyledContactInformation>{company}</StyledContactInformation>
-      </ContactContainer>
-    </li>
+    </ContactContainer>
   )
 }
 
-const ContactContainer = styled.section`
+const ContactContainer = styled.div`
   padding: 10px 30px;
   height: 100%;
   margin: 10px;

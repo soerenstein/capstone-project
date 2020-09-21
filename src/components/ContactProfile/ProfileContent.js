@@ -1,11 +1,35 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/macro'
+import { useParams } from 'react-router-dom'
 
-export default function ProfileContent({contacts}) {
+export default function ProfileContent({
+  contacts,
+  onFavoriteClick,
+  favorites,
+}) {
   const [isCategoryVisible, setIsCategoryVisible] = useState(false)
   const [isNoteVisible, setIsNoteVisible] = useState(false)
-  const {firstName, lastName, company, phone, mail, street, zip, city, category, note} = contacts
-  
+
+  let { id } = useParams()
+  let contactById = contacts.find((a) => a.id === id)
+
+  const {
+    firstName,
+    lastName,
+    company,
+    phone,
+    mail,
+    street,
+    zip,
+    city,
+    category,
+    note,
+  } = contactById || contacts
+
+  const isFavored = favorites.find(
+    (favorites) => contactById.id === favorites.id
+  )
+
   return (
     <ProfileWrapper>
       <NameStyled>{firstName + ' ' + lastName}</NameStyled>
@@ -37,6 +61,10 @@ export default function ProfileContent({contacts}) {
           </DetailItemContainer>
         ) : null}
       </DetailListStyled>
+
+      <button onClick={() => onFavoriteClick(contactById)}>
+        {isFavored ? 'Aus Favoriten entfernen' : 'Zu Favoriten hinzufügen'}
+      </button>
     </ProfileWrapper>
   )
 
@@ -62,7 +90,7 @@ const ProfileWrapper = styled.div`
     rgba(255, 171, 29, 1) 0%,
     rgba(248, 80, 28, 1) 100%
   );
-  height: 90vh;
+  height: 80vh;
   z-index: 100;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -87,7 +115,7 @@ const DetailListStyled = styled.ul`
   padding: 0;
 `
 
-const DetailItemContainer = styled.p`
+const DetailItemContainer = styled.div`
   background: white;
   border-radius: 30px;
   padding: 10px 0 10px 30px;

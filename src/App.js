@@ -1,32 +1,32 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ContactList from './components/ContactList/ContactList'
-import ContactProfile from './components/ContactProfile/ContactProfile'
 import HomePage from './components/HomePage/HomePage'
 import UserProfile from './components/UserProfile/UserProfile'
 import UserProfileForm from './components/UserProfile/UserProfileForm'
 import CreateContact from './components/CreateContactForm/CreateContact'
-import Header from './components/Header/Header'
+import ZeroContacts from './components/ContactList/ZeroContacts'
+import ZeroFavorites from './components/ContactList/ZeroFavorites'
+import ContactProfile from './components/ContactProfile/ContactProfile'
+import FavContactList from './components/ContactList/FavContactList'
+import useContacts from './hooks/useContacts'
+import useUser from './hooks/useUser'
+import useFavorites from './hooks/useFavorites'
 
 export default function App() {
-  const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('savedContact')) || []
-  )
-
-  const [userData, setUserData] = useState(
-    JSON.parse(localStorage.getItem('savedUser')) || ['']
-  )
-  const user = userData[0]
+  const [contacts, addContact] = useContacts()
+  const [savedUser, addUser] = useUser()
+  const [favorites, toggleFavorite] = useFavorites()
 
   return (
     <Router>
       <Switch>
         <Route exact path="/">
-          <HomePage user={user} />
+          <HomePage user={savedUser} />
         </Route>
         <Route path="/user-profile">
-          {localStorage.getItem('savedUser') !== null ? (
-            <UserProfile user={user} />
+          {savedUser ? (
+            <UserProfile user={savedUser} />
           ) : (
             <UserProfileForm onSubmit={addUser} />
           )}
@@ -35,30 +35,30 @@ export default function App() {
           <UserProfileForm onSubmit={addUser} />
         </Route>
         <Route path="/favorites">
-          <Header />
+          {favorites.length ? (
+            <FavContactList favorites={favorites} />
+          ) : (
+            <ZeroFavorites />
+          )}
         </Route>
         <Route path="/create">
           <CreateContact onSubmit={addContact} />
         </Route>
         <Route path="/list">
-          <ContactList contacts={contacts} />
+          {contacts.length ? (
+            <ContactList contacts={contacts} />
+          ) : (
+            <ZeroContacts />
+          )}
         </Route>
-        <Route path="/profile">
-          <ContactProfile />
+        <Route path="/:id">
+          <ContactProfile
+            contacts={contacts}
+            onFavoriteClick={toggleFavorite}
+            favorites={favorites}
+          />
         </Route>
       </Switch>
     </Router>
   )
-
-  function addContact(contactItem) {
-    setContacts([...contacts, contactItem])
-    localStorage.setItem(
-      'savedContact',
-      JSON.stringify([...contacts, contactItem])
-    )
-  }
-  function addUser(userItem) {
-    setUserData([userItem])
-    localStorage.setItem('savedUser', JSON.stringify([userItem]))
-  }
 }

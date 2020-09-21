@@ -6,7 +6,7 @@ export default function CreateContact({ onSubmit }) {
     return (
         <div>
             <Header />
-            <CreateContactForm />
+            <CreateContactForm onSubmit={onSubmit} />
         </div>
     )
 }

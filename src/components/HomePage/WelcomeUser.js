@@ -2,18 +2,16 @@ import React from 'react'
 import styled from 'styled-components/macro'
 
 export default function WelcomeUser({ user }) {
-  const { firstName } = user
-
   return (
     <WelcomeWrapper>
-      {firstName === undefined ? (
+      {user ? (
         <>
-          <StyledWelcome>Moin!</StyledWelcome>
+          <StyledWelcome>Moin</StyledWelcome>
+          <StyledWelcome>{user.firstName}</StyledWelcome>
         </>
       ) : (
         <>
-          <StyledWelcome>Moin</StyledWelcome>
-          <StyledWelcome>{firstName}</StyledWelcome>
+          <StyledWelcome>Moin!</StyledWelcome>
         </>
       )}
     </WelcomeWrapper>
