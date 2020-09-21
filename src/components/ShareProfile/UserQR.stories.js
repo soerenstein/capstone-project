@@ -2,7 +2,7 @@ import React from 'react'
 import UserQR from './UserQR'
 
 export default {
-  title: 'UserQR',
+  title: 'UserProfile',
   component: UserQR,
 }
 
@@ -10,7 +10,7 @@ const Code = (args) => <UserQR {...args} />
 
 export const QR = Code.bind({})
 QR.args = {
-    user: {
+  user: {
     version: '3.0',
     lastName: 'Mustermann',
     firstName: 'Max',
@@ -25,5 +25,5 @@ QR.args = {
       city: 'Hamburg',
       postalCode: '22761',
     },
-    }
+  },
 }
