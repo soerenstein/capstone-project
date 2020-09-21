@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
 
 export default function CreateContactForm({ onSubmit }) {
-
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
 
   const disabledButton = !firstName && !lastName
-  
+
   return (
     <div>
       <FormStyled onSubmit={handleSubmit}>
@@ -84,8 +83,18 @@ export default function CreateContactForm({ onSubmit }) {
   )
 
   function handleChange(event) {
-    event.target.id === "firstName" && setFirstName(event.target.id === "firstName" && event.target.value !== '' ? true : false)
-    event.target.id === "lastName" &&  setLastName(event.target.id === "lastName" && event.target.value !== '' ? true : false)    
+    event.target.id === 'firstName' &&
+      setFirstName(
+        event.target.id === 'firstName' && event.target.value !== ''
+          ? true
+          : false
+      )
+    event.target.id === 'lastName' &&
+      setLastName(
+        event.target.id === 'lastName' && event.target.value !== ''
+          ? true
+          : false
+      )
   }
 
   function handleSubmit(event) {
@@ -114,7 +123,7 @@ const FormStyled = styled.form`
   display: grid;
   gap: 10px;
   padding: 20px;
-  margin-top: 60px; 
+  margin-top: 60px;
 `
 const LabelWrapper = styled.div`
   display: grid;

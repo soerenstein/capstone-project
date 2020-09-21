@@ -7,13 +7,13 @@ Object {
     <div>
       <div>
         <form
-          class="sc-bdnylx bFgYJe"
+          class="sc-AxjAm kzKtwf"
         >
           <div
-            class="sc-gtssRu ftdAIY"
+            class="sc-AxirZ erNbfn"
           >
             <label
-              class="sc-dlnjPT bGySTC"
+              class="sc-AxiKw bMvXWd"
               for="firstName"
             >
               Vorname
@@ -26,7 +26,7 @@ Object {
               />
             </label>
             <label
-              class="sc-dlnjPT bGySTC"
+              class="sc-AxiKw bMvXWd"
               for="lastName"
             >
               Nachname
@@ -40,7 +40,7 @@ Object {
             </label>
           </div>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="company"
           >
             Unternehmen
@@ -52,7 +52,7 @@ Object {
             />
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="phone"
           >
             Telefon
@@ -63,7 +63,7 @@ Object {
             />
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="mail"
           >
             E-Mail
@@ -73,7 +73,7 @@ Object {
             />
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="street"
           >
             Adresse
@@ -84,7 +84,7 @@ Object {
               type="text"
             />
             <div
-              class="sc-gtssRu ftdAIY"
+              class="sc-AxirZ erNbfn"
             >
               <input
                 id="zip"
@@ -101,7 +101,7 @@ Object {
             </div>
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="note"
           >
             Notiz
@@ -112,7 +112,7 @@ Object {
             />
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="category"
           >
             Kategorie
@@ -124,7 +124,7 @@ Object {
             />
           </label>
           <button
-            class="sc-hKFyIo"
+            class="sc-AxhCb ccMvAG"
             disabled=""
             id="submit"
           >
@@ -137,13 +137,13 @@ Object {
   "container": <div>
     <div>
       <form
-        class="sc-bdnylx bFgYJe"
+        class="sc-AxjAm kzKtwf"
       >
         <div
-          class="sc-gtssRu ftdAIY"
+          class="sc-AxirZ erNbfn"
         >
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="firstName"
           >
             Vorname
@@ -156,7 +156,7 @@ Object {
             />
           </label>
           <label
-            class="sc-dlnjPT bGySTC"
+            class="sc-AxiKw bMvXWd"
             for="lastName"
           >
             Nachname
@@ -170,7 +170,7 @@ Object {
           </label>
         </div>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="company"
         >
           Unternehmen
@@ -182,7 +182,7 @@ Object {
           />
         </label>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="phone"
         >
           Telefon
@@ -193,7 +193,7 @@ Object {
           />
         </label>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="mail"
         >
           E-Mail
@@ -203,7 +203,7 @@ Object {
           />
         </label>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="street"
         >
           Adresse
@@ -214,7 +214,7 @@ Object {
             type="text"
           />
           <div
-            class="sc-gtssRu ftdAIY"
+            class="sc-AxirZ erNbfn"
           >
             <input
               id="zip"
@@ -231,7 +231,7 @@ Object {
           </div>
         </label>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="note"
         >
           Notiz
@@ -242,7 +242,7 @@ Object {
           />
         </label>
         <label
-          class="sc-dlnjPT bGySTC"
+          class="sc-AxiKw bMvXWd"
           for="category"
         >
           Kategorie
@@ -254,7 +254,7 @@ Object {
           />
         </label>
         <button
-          class="sc-hKFyIo"
+          class="sc-AxhCb ccMvAG"
           disabled=""
           id="submit"
         >

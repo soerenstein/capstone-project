@@ -36,7 +36,9 @@ export default function UserProfileContent({ user }) {
           </DataContainer>
         </ListStyled>
         <Link to="/edit-user">
-          <button to="/edit-user">Bearbeiten</button>
+          <button id="edit" to="/edit-user">
+            Bearbeiten
+          </button>
         </Link>
       </Wrapper>
     </>

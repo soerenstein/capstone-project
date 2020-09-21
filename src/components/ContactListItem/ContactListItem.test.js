@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import ContactListitem from './ContactListItem'
+import ContactListItem from './ContactListItem'
 
 describe('The listItem', () => {
   it('renders correctly', () => {
-    const listItem = render(<ContactListitem />)
+    const listItem = render(<ContactListItem />)
     expect(listItem).toMatchSnapshot()
   })
 })
