@@ -1,33 +1,37 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import { ReactComponent as UserProfile } from '../Design/img/userHomepage.svg'
+import { ReactComponent as UserList } from '../Design/img/userListHomepage.svg'
+import { ReactComponent as AddUser } from '../Design/img/userPlusHomepage.svg'
+import { ReactComponent as FavoriteUser } from '../Design/img/FavoriteUserHomepage.svg'
 
 export default function NavButton() {
   return (
     <div>
       <NavWrapper>
         <a href="/user-profile">
-          <ButtonStyled>
-            <IconStyled src={''} alt="" />
+          <NavButtonWrapper>
+            <UserProfile />
             <H2Styled>Profil</H2Styled>
-          </ButtonStyled>
+          </NavButtonWrapper>
         </a>
         <a href="/create">
-          <ButtonStyled>
-            <IconStyled src={''} alt="" />
+          <NavButtonWrapper>
+            <AddUser />
             <H2Styled>Kontakt hinzufügen</H2Styled>
-          </ButtonStyled>
+          </NavButtonWrapper>
         </a>
         <a href="/list">
-          <ButtonStyled>
-            <IconStyled src={''} alt="" />
+          <NavButtonWrapper>
+            <UserList />
             <H2Styled>Kontaktliste</H2Styled>
-          </ButtonStyled>
+          </NavButtonWrapper>
         </a>
         <a href="/favorites">
-          <ButtonStyled>
-            <IconStyled src={''} alt="" />
+          <NavButtonWrapper>
+            <FavoriteUser />
             <H2Styled>Favoriten</H2Styled>
-          </ButtonStyled>
+          </NavButtonWrapper>
         </a>
       </NavWrapper>
     </div>
@@ -35,31 +39,41 @@ export default function NavButton() {
 }
 
 const NavWrapper = styled.div`
+  position: absolute;
+  bottom: 50px;
   display: flex;
+
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: center;
   margin-top: 20px;
+  & a {
+    text-decoration: none;
+  }
+  & svg {
+    margin-top: 20%;
+  }
 `
 
-const ButtonStyled = styled.button`
-  width: 20vh;
-  height: 20vh;
-  background: white;
+const NavButtonWrapper = styled.div`
+  width: 22vh;
+  height: 22vh;
+  display: grid;
+  grid-template-rows: 60% 40%;
+  justify-items: center;
   margin: 10px;
-  border-radius: 40px;
-  box-shadow: 8px 6px 20px -8px white;
-  border-style: none;
-`
-
-const IconStyled = styled.img`
-  margin-top: 15px;
-  vertical-align: top;
+  align-content: center;
+  text-align: center;
+  background: transparent 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px #00000029;
+  border-radius: 30px;
 `
 
 const H2Styled = styled.h2`
   font-size: 18px;
   vertical-align: bottom;
+  color: black;
+  font-weight: 500;
+  margin-top: 0;
   margin-bottom: 0;
 `

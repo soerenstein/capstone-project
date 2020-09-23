@@ -8,17 +8,17 @@ export default function TopLeftCard() {
 const StyledTopCard = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
-  right: 50px;
+  left: -10px;
+  right: 0px;
   margin: 0 auto;
   padding: 10px;
   background: rgb(255, 171, 29);
   background: linear-gradient(
-    240deg,
+    45deg,
     rgba(255, 171, 29, 1) 0%,
     rgba(248, 80, 28, 1) 100%
   );
-  height: 30vh;
+  height: 35%;
   z-index: -10;
   border-bottom-right-radius: 40px;
 `

@@ -11,7 +11,7 @@ export default function WelcomeUser({ user }) {
         </>
       ) : (
         <>
-          <StyledWelcome>Moin!</StyledWelcome>
+          <StyledWelcome>Moin.</StyledWelcome>
         </>
       )}
     </WelcomeWrapper>
@@ -20,11 +20,15 @@ export default function WelcomeUser({ user }) {
 
 const WelcomeWrapper = styled.div`
   position: absolute;
-  top: 100px;
-  left: 40px;
+  top: 18%;
+  left: 10%;
 `
 
 const StyledWelcome = styled.h2`
-  margin: 0px;
+  margin: 0;
   color: white;
+  width: 80vw; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
