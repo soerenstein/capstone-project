@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components/macro'
 import { useParams } from 'react-router-dom'
 import PageLayout from '../Design/CardWrapper/PageLayout'
@@ -9,9 +9,6 @@ export default function ProfileContent({
   onFavoriteClick,
   favorites,
 }) {
-  const [isCategoryVisible, setIsCategoryVisible] = useState(false)
-  const [isNoteVisible, setIsNoteVisible] = useState(false)
-
   let { id } = useParams()
   let contactById = contacts.find((a) => a.id === id)
 
@@ -76,19 +73,6 @@ export default function ProfileContent({
   )
 }
 
-const Wrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  padding: 0 15px;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 171, 29, 1) 0%,
-    rgba(248, 80, 28, 1) 100%
-  );
-  border-radius: 40px 40px 0 0;
-`
-
 const NameStyled = styled.h2`
   color: white;
   margin: 25px auto 0 auto;
@@ -131,11 +115,12 @@ const DetailItemContent = styled.p`
 `
 
 const ButtonStyled = styled.button`
+  margin: 10px auto 20px auto;
   padding: 17px 48px;
   font-size: 20px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0 5px 10px #00000029;
   border-style: none;
   border-radius: 30px;
-  justify-content: center;
+  width: 100%;
 `

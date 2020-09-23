@@ -1,6 +1,5 @@
 import React from 'react'
 import ProfileContent from '../components/ContactProfile/ProfileContent'
-import Header from '../components/Header/Header'
 
 export default function ContactProfile({
   contacts,
@@ -8,13 +7,10 @@ export default function ContactProfile({
   favorites,
 }) {
   return (
-    <>
-      <Header />
-      <ProfileContent
-        contacts={contacts}
-        onFavoriteClick={onFavoriteClick}
-        favorites={favorites}
-      />
-    </>
+    <ProfileContent
+      contacts={contacts}
+      onFavoriteClick={onFavoriteClick}
+      favorites={favorites}
+    />
   )
 }
