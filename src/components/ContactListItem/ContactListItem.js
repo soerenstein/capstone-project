@@ -24,13 +24,14 @@ export default function ContactListItem({
 
 const ContactContainer = styled.div`
   padding: 10px 30px;
-  height: 100%;
+  height: 90px;
   margin: 10px;
   display: grid;
-  grid-template-columns: 30% auto;
+  grid-template-columns: 8% auto;
   justify-self: end;
-  border-radius: 10px;
-  box-shadow: 8px 6px 20px -10px rgba(128, 128, 128, 1);
+  border-radius: 30px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 10px #00000029;
 `
 const SVGWrapper = styled.div`
   grid-column: 1;
@@ -40,12 +41,12 @@ const SVGWrapper = styled.div`
 `
 const StyledContactInformation = styled.p`
   padding: 5px;
+  padding-left: 20px;
   margin: 0;
   justify-self: start;
   grid-column: 2;
-  word-wrap: normal;
-  width: 90%;
+  white-space: nowrap;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 1em;
 `
