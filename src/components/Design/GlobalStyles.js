@@ -3,36 +3,27 @@ import { createGlobalStyle } from 'styled-components/macro'
 export default createGlobalStyle`
 * {
     box-sizing: border-box;
+
 }
-/* @font-face {
+
+/* montserrat-regular - latin */
+@font-face {
   font-family: 'Montserrat';
   font-style: medium;
   font-weight: 400;
-  src: url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');  IE9 Compat Modes 
-  src: local('Montserrat'), local('Montserrat'),
-} */
-
-@font-face {
-    font-family: 'Montserrat Medium';
-    font-style: medium;
-    font-weight: normal;
-    src: local('Montserrat Medium'), url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap') format('woff');
-  }
+  src: url('../Design/Fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Regular'), local('Montserrat-Regular'),
+       url('../Design/Fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../Design/Fonts/montserrat-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../Design/Fonts/montserrat-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../Design/Fonts/montserrat-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../Design/Fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
 
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
     line-height: 1.4;
-    overflow: hidden;
     height: 100vh;
-    
 }
-
-input, button, textarea {
-    font-size: 0.75em;
-  }
 `
-
-
-  
