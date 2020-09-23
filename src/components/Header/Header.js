@@ -9,24 +9,28 @@ import { NavLink } from 'react-router-dom'
 export default function Header() {
   return (
     <HeaderWrapper>
-        <NavLink to="/">
-          <ArrowStyled id="back" />
-        </NavLink>
-        <NavLink to="/favorites" activeStyle={{ fill: '#FFAB1D' }}>
-          <FavoriteStyled />
-        </NavLink>
-        <NavLink to="/user-profile" activeStyle={{ fill: '#FFAB1D' }}>
-          <ProfileStyled />
-        </NavLink>
-        <NavLink to="/create" activeStyle={{ fill: '#FFAB1D' }}>
-          <CreateStyled />
-        </NavLink>
+      <NavLink to="/">
+        <ArrowStyled id="back" />
+      </NavLink>
+      <NavLink to="/favorites" activeStyle={{ fill: '#FFAB1D' }}>
+        <FavoriteStyled />
+      </NavLink>
+      <NavLink to="/user-profile" activeStyle={{ fill: '#FFAB1D' }}>
+        <ProfileStyled />
+      </NavLink>
+      <NavLink to="/create" activeStyle={{ fill: '#FFAB1D' }}>
+        <CreateStyled />
+      </NavLink>
     </HeaderWrapper>
   )
 }
 
 const HeaderWrapper = styled.div`
   display: block;
+  z-index: 100;
+  background: white;
+  height: 55px;
+  box-shadow: 0 5px 5px 10px white;
 `
 
 const ArrowStyled = styled(Arrow)`
