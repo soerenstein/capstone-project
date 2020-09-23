@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+        class="ContactListItem__ContactContainer-q0ui6m-0 ctAmRw"
       >
         <div
           class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
@@ -16,19 +16,19 @@ Object {
           </svg>
         </div>
         <p
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 llnXqF"
         >
           undefined undefined
         </p>
         <p
-          class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+          class="ContactListItem__StyledContactInformation-q0ui6m-2 llnXqF"
         />
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="ContactListItem__ContactContainer-q0ui6m-0 dUeUHH"
+      class="ContactListItem__ContactContainer-q0ui6m-0 ctAmRw"
     >
       <div
         class="ContactListItem__SVGWrapper-q0ui6m-1 biSRax"
@@ -38,12 +38,12 @@ Object {
         </svg>
       </div>
       <p
-        class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+        class="ContactListItem__StyledContactInformation-q0ui6m-2 llnXqF"
       >
         undefined undefined
       </p>
       <p
-        class="ContactListItem__StyledContactInformation-q0ui6m-2 jEhMWJ"
+        class="ContactListItem__StyledContactInformation-q0ui6m-2 llnXqF"
       />
     </div>
   </div>,

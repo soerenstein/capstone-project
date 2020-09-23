@@ -7,79 +7,71 @@ Object {
     <div>
       <div>
         <div
-          class="NavButton__NavWrapper-sc-1tu5d0l-0 kKIkyu"
+          class="NavButton__NavWrapper-sc-1tu5d0l-0 kTbxel"
         >
           <a
             href="/user-profile"
           >
-            <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            <div
+              class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
             >
-              <img
-                alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-                src=""
-              />
+              <svg>
+                userHomepage.svg
+              </svg>
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
               >
                 Profil
               </h2>
-            </button>
+            </div>
           </a>
           <a
             href="/create"
           >
-            <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            <div
+              class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
             >
-              <img
-                alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-                src=""
-              />
+              <svg>
+                userPlusHomepage.svg
+              </svg>
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
               >
                 Kontakt hinzufügen
               </h2>
-            </button>
+            </div>
           </a>
           <a
             href="/list"
           >
-            <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            <div
+              class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
             >
-              <img
-                alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-                src=""
-              />
+              <svg>
+                userListHomepage.svg
+              </svg>
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
               >
                 Kontaktliste
               </h2>
-            </button>
+            </div>
           </a>
           <a
             href="/favorites"
           >
-            <button
-              class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+            <div
+              class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
             >
-              <img
-                alt=""
-                class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-                src=""
-              />
+              <svg>
+                FavoriteUserHomepage.svg
+              </svg>
               <h2
-                class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+                class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
               >
                 Favoriten
               </h2>
-            </button>
+            </div>
           </a>
         </div>
       </div>
@@ -88,79 +80,71 @@ Object {
   "container": <div>
     <div>
       <div
-        class="NavButton__NavWrapper-sc-1tu5d0l-0 kKIkyu"
+        class="NavButton__NavWrapper-sc-1tu5d0l-0 kTbxel"
       >
         <a
           href="/user-profile"
         >
-          <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+          <div
+            class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
           >
-            <img
-              alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-              src=""
-            />
+            <svg>
+              userHomepage.svg
+            </svg>
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
             >
               Profil
             </h2>
-          </button>
+          </div>
         </a>
         <a
           href="/create"
         >
-          <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+          <div
+            class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
           >
-            <img
-              alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-              src=""
-            />
+            <svg>
+              userPlusHomepage.svg
+            </svg>
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
             >
               Kontakt hinzufügen
             </h2>
-          </button>
+          </div>
         </a>
         <a
           href="/list"
         >
-          <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+          <div
+            class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
           >
-            <img
-              alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-              src=""
-            />
+            <svg>
+              userListHomepage.svg
+            </svg>
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
             >
               Kontaktliste
             </h2>
-          </button>
+          </div>
         </a>
         <a
           href="/favorites"
         >
-          <button
-            class="NavButton__ButtonStyled-sc-1tu5d0l-1 fIOQGb"
+          <div
+            class="NavButton__NavButtonWrapper-sc-1tu5d0l-1 cqTzbd"
           >
-            <img
-              alt=""
-              class="NavButton__IconStyled-sc-1tu5d0l-2 FJojP"
-              src=""
-            />
+            <svg>
+              FavoriteUserHomepage.svg
+            </svg>
             <h2
-              class="NavButton__H2Styled-sc-1tu5d0l-3 huddWA"
+              class="NavButton__H2Styled-sc-1tu5d0l-2 yNZWY"
             >
               Favoriten
             </h2>
-          </button>
+          </div>
         </a>
       </div>
     </div>
