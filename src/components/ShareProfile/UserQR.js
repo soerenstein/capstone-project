@@ -1,6 +1,5 @@
 import React from 'react'
 import qrCode from 'qr-code-and-vcard/dist/QrCode'
-import styled from 'styled-components/macro'
 
 export default function UserQR({ user }) {
   const {

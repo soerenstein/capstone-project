@@ -40,7 +40,7 @@ export default function UserProfileContent({ user }) {
           </DataContainer>
         </ListStyled>
         <Link to="/edit-user">
-          <ButtonStyled id="edit" to="/edit-user">
+          <ButtonStyled id="edit">
             Bearbeiten
           </ButtonStyled>
         </Link>
