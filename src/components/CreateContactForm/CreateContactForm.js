@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 import CardWrapper from '../Design/CardWrapper/CardWrapper'
@@ -7,6 +8,7 @@ import PageLayout from '../Design/CardWrapper/PageLayout'
 export default function CreateContactForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
+  const history = useHistory()
 
   const disabledButton = !firstName && !lastName
 
@@ -14,6 +16,9 @@ export default function CreateContactForm({ onSubmit }) {
     <PageLayout title="Kontakt anlegen">
       <CardWrapper>
         <FormStyled onSubmit={handleSubmit}>
+          <ButtonStyled onClick={() => history.push(`/scan`)}>
+            QR-Code scannen
+          </ButtonStyled>
           <LabelWrapper>
             <LabelStyled htmlFor="firstName">
               <LabelName>Vorname</LabelName>
