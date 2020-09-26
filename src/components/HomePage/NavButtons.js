@@ -4,37 +4,38 @@ import { ReactComponent as UserProfile } from '../Design/img/userHomepage.svg'
 import { ReactComponent as UserList } from '../Design/img/userListHomepage.svg'
 import { ReactComponent as AddUser } from '../Design/img/userPlusHomepage.svg'
 import { ReactComponent as FavoriteUser } from '../Design/img/FavoriteUserHomepage.svg'
+import { NavLink } from 'react-router-dom'
 
-export default function NavButton() {
+export default function NavButtons() {
   return (
-    <div>
+    <>
       <NavWrapper>
-        <a href="/user-profile">
+        <NavLink to="/user-profile">
           <NavButtonWrapper>
             <UserProfile />
             <H2Styled>Profil</H2Styled>
           </NavButtonWrapper>
-        </a>
-        <a href="/create">
+        </NavLink>
+        <NavLink to="/create">
           <NavButtonWrapper>
             <AddUser />
             <H2Styled>Kontakt hinzufügen</H2Styled>
           </NavButtonWrapper>
-        </a>
-        <a href="/list">
+        </NavLink>
+        <NavLink to="/list">
           <NavButtonWrapper>
             <UserList />
             <H2Styled>Kontaktliste</H2Styled>
           </NavButtonWrapper>
-        </a>
-        <a href="/favorites">
+        </NavLink>
+        <NavLink to="/favorites">
           <NavButtonWrapper>
             <FavoriteUser />
             <H2Styled>Favoriten</H2Styled>
           </NavButtonWrapper>
-        </a>
+        </NavLink>
       </NavWrapper>
-    </div>
+    </>
   )
 }
 
@@ -70,9 +71,9 @@ const NavButtonWrapper = styled.div`
 `
 
 const H2Styled = styled.h2`
-  font-size: 18px;
+  font-size: 1.1em;
   vertical-align: bottom;
-  color: black;
+  color: var(--black);
   font-weight: 500;
   margin-top: 0;
   margin-bottom: 0;
