@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import Header from '../../Header/Header'
+import NavBar from '../../NavBar/NavBar'
 
 export default function PageLayout({ title, children }) {
   return (
     <PageStyled>
-      <Header />
+      <NavBar />
       {title ? <PageName>{title}</PageName> : null}
       {children}
     </PageStyled>
@@ -22,6 +22,6 @@ const PageStyled = styled.main`
 const PageName = styled.h1`
   margin: 0 auto;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 1.5em;
   font-weight: 500;
 `
