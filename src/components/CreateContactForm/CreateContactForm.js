@@ -155,7 +155,7 @@ const LabelWrapper = styled.div`
 
 const LabelStyled = styled.label`
   display: grid;
-  color: #ffffff;
+  color: var(--white);
 `
 
 const LabelName = styled.div`
@@ -165,7 +165,7 @@ const InputStyled = styled.input`
   border-style: none;
   padding-left: 20px;
   height: 50px;
-  box-shadow: 0px 5px 10px #00000029;
+  box-shadow: var(--shadow-grey);
   border-radius: 30px;
   outline: none;
   margin-bottom: 15px;
@@ -173,9 +173,9 @@ const InputStyled = styled.input`
 
 const ButtonStyled = styled.button`
   padding: 17px 48px;
-  font-size: 20px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 10px #00000029;
+  font-size: 1.2em;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
   border-style: none;
   border-radius: 30px;
   opacity: 1;

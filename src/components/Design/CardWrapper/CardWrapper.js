@@ -17,11 +17,7 @@ const StyledCardWrapper = styled.div`
   bottom: 0;
   overflow: auto;
   padding: 0 15px;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 171, 29, 1) 0%,
-    rgba(248, 80, 28, 1) 100%
-  );
+  background: var(--gradient-orange);
   border-radius: 40px 40px 0 0;
 `
 
@@ -31,11 +27,7 @@ const Shadow = styled.div`
   top: 15%;
   width: 100%;
   border-radius: 40px 40px 0 0;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 171, 29, 0) 0%,
-    rgba(248, 80, 28, 1) 100%
-  );
+  background: var(--gradient-orange-shadow);
   z-index: 100;
   margin-bottom: 1px;
 `

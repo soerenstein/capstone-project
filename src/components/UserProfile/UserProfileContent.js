@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import UserQR from '../ShareProfile/UserQR'
 import PageLayout from '../Design/CardWrapper/PageLayout'
 
@@ -39,11 +39,9 @@ export default function UserProfileContent({ user }) {
             <DataContent>{zip + ' ' + city}</DataContent>
           </DataContainer>
         </ListStyled>
-        <Link to="/edit-user">
-          <ButtonStyled id="edit" to="/edit-user">
-            Bearbeiten
-          </ButtonStyled>
-        </Link>
+        <NavLink id="edit" to="/edit-user">
+          <ButtonStyled>Bearbeiten</ButtonStyled>
+        </NavLink>
       </Wrapper>
     </PageLayout>
   )
@@ -55,11 +53,7 @@ const Wrapper = styled.div`
   width: 100%;
   overflow: scroll;
   padding: 20px 15px;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 171, 29, 1) 0%,
-    rgba(248, 80, 28, 1) 100%
-  );
+  background: var(--gradient-orange);
   border-radius: 40px 40px 0 0;
 `
 
@@ -71,14 +65,14 @@ const QRWrapper = styled.div`
   height: 230px;
   width: 230px;
   margin: 20px auto -15px auto;
-  background: white 0% 0% no-repeat padding-box;
+  background: var(--white);
   box-shadow: 0px 3px 10px #00000029;
   border-radius: 30px;
   z-index: 100;
 `
 
 const NameStyled = styled.h2`
-  color: white;
+  color: var(--white);
   margin: 25px auto 0 auto;
   text-align: center;
   white-space: nowrap;
@@ -88,8 +82,8 @@ const NameStyled = styled.h2`
 `
 
 const CompanyStyled = styled.h3`
-  color: white;
-  font-size: 20px;
+  color: var(--white);
+  font-size: 1em;
   text-align: center;
   margin: 5px 0;
 `
@@ -102,13 +96,13 @@ const ListStyled = styled.ul`
 const DataContainer = styled.div`
   padding: 10px;
   padding-left: 30px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 10px #00000029;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
   border-radius: 30px;
 `
 
 const HeadingStyled = styled.h4`
-  color: white;
+  color: var(--white);
   margin: 5px 0 5px 0;
   padding-left: 30px;
   padding-top: 10px;
@@ -125,9 +119,10 @@ const DataContent = styled.p`
 const ButtonStyled = styled.button`
   margin: 10px auto 20px auto;
   padding: 17px 48px;
-  font-size: 20px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 10px #00000029;
+  text-decoration: none;
+  font-size: 1.2em;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
   border-style: none;
   border-radius: 30px;
   width: 100%;
