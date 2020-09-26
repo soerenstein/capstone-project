@@ -15,10 +15,10 @@ export default function CreateContactForm({ onSubmit }) {
   return (
     <PageLayout title="Kontakt anlegen">
       <CardWrapper>
+        <QRButtonStyled onClick={() => history.push(`/scan`)}>
+          QR-Code scannen
+        </QRButtonStyled>
         <FormStyled onSubmit={handleSubmit}>
-          <ButtonStyled onClick={() => history.push(`/scan`)}>
-            QR-Code scannen
-          </ButtonStyled>
           <LabelWrapper>
             <LabelStyled htmlFor="firstName">
               <LabelName>Vorname</LabelName>
@@ -189,4 +189,16 @@ const ButtonStyled = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+`
+
+const QRButtonStyled = styled.button`
+  padding: 17px 48px;
+  font-size: 1.2em;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
+  border-style: none;
+  border-radius: 30px;
+  opacity: 1;
+  margin: 50px 0 0 0;
+  width: 100%;
 `
