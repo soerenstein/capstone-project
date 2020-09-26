@@ -26,4 +26,26 @@ body {
     line-height: 1.4;
     height: 100vh;
 }
+
+:root {
+    --button-white: #ffffff 0% 0% no-repeat padding-box; 
+    --white: #ffffff;
+    --black: #000000; 
+    
+    --gradient-orange: linear-gradient(
+    0deg,
+    rgba(255, 171, 29, 1) 0%,
+    rgba(248, 80, 28, 1) 100%);
+    --gradient-orange-shadow: linear-gradient(
+    0deg,
+    rgba(255, 171, 29, 0) 0%,
+    rgba(248, 80, 28, 1) 100%);
+    --gradient-orange-45: linear-gradient(
+    45deg,
+    rgba(255, 171, 29, 1) 0%,
+    rgba(248, 80, 28, 1) 100%
+  );
+  
+  --shadow-grey: 0px 5px 10px #00000029;
+}
 `

@@ -74,7 +74,7 @@ export default function ProfileContent({
 }
 
 const NameStyled = styled.h2`
-  color: white;
+  color: var(--white);
   margin: 25px auto 0 auto;
   text-align: center;
   white-space: nowrap;
@@ -84,7 +84,7 @@ const NameStyled = styled.h2`
 `
 
 const CompanyStyled = styled.h3`
-  color: white;
+  color: var(--white);
 
   text-align: center;
   margin: 5px 0;
@@ -98,13 +98,13 @@ const DetailListStyled = styled.ul`
 const DataContainer = styled.div`
   padding: 10px;
   padding-left: 30px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  background: var(--button-white);
   box-shadow: 0 5px 10px #00000029;
   border-radius: 30px;
 `
 
 const DetailItemHeading = styled.h4`
-  color: white;
+  color: var(--white);
   margin: 5px 0 5px 0;
   padding-left: 30px;
   padding-top: 10px;
@@ -117,8 +117,8 @@ const DetailItemContent = styled.p`
 const ButtonStyled = styled.button`
   margin: 10px auto 20px auto;
   padding: 17px 48px;
-  font-size: 20px;
-  background: #ffffff 0% 0% no-repeat padding-box;
+  font-size: 1.2em;
+  background: var(--button-white);
   box-shadow: 0 5px 10px #00000029;
   border-style: none;
   border-radius: 30px;

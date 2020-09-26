@@ -9,9 +9,7 @@ export default function ZeroContacts() {
         <NotificationStyled>
           Es sind keine Kontakte vorhanden.
         </NotificationStyled>
-        <NavLink to="/create">
-          <ButtonStyled>Neuen Kontakt erstellen</ButtonStyled>
-        </NavLink>
+        <StyledNavLink to="/create">Neuen Kontakt erstellen</StyledNavLink>
       </ListWrapper>
     </>
   )
@@ -26,15 +24,16 @@ const ListWrapper = styled.div`
 `
 
 const NotificationStyled = styled.p`
-  color: white;
+  color: var(--white);
   text-align: center;
 `
 
-const ButtonStyled = styled.button`
+const StyledNavLink = styled(NavLink)`
   padding: 17px 48px;
-  font-size: 20px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 10px #00000029;
+  text-decoration: none;
+  font-size: 1.2em;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
   border-style: none;
   border-radius: 30px;
 `

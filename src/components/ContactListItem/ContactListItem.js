@@ -30,8 +30,8 @@ const ContactContainer = styled.div`
   grid-template-columns: 8% auto;
   justify-self: end;
   border-radius: 30px;
-  background: #ffffff 0% 0% no-repeat padding-box;
-  box-shadow: 0px 5px 10px #00000029;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
 `
 const SVGWrapper = styled.div`
   grid-column: 1;

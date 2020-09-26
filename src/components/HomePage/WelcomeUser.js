@@ -26,7 +26,7 @@ const WelcomeWrapper = styled.div`
 
 const StyledWelcome = styled.h2`
   margin: 0;
-  color: white;
+  color: var(--white);
   width: 80vw; 
   white-space: nowrap;
   overflow: hidden;

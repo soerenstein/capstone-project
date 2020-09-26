@@ -6,7 +6,7 @@ import { ReactComponent as Create } from '../Design/img/user-plus.svg'
 import styled from 'styled-components/macro'
 import { NavLink } from 'react-router-dom'
 
-export default function Header() {
+export default function NavBar() {
   return (
     <HeaderWrapper>
       <NavLink to="/">
