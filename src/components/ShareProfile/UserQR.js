@@ -1,6 +1,5 @@
 import React from 'react'
 import qrCode from 'qr-code-and-vcard/dist/QrCode'
-import styled from 'styled-components/macro'
 
 export default function UserQR({ user }) {
   const {
@@ -32,18 +31,12 @@ export default function UserQR({ user }) {
     },
   }
 
-  return <QRStyled dangerouslySetInnerHTML={{ __html: createQRCode() }} />
+  return <div dangerouslySetInnerHTML={{ __html: createQRCode() }} />
   function createQRCode() {
     return qrCode.createVCardQr(contactCardInfo, {
       typeNumber: 20,
-      cellSize: 3,
+      cellSize: 2,
       typeElement: 'createSvg',
     })
   }
 }
-
-const QRStyled = styled.section`
-  display: flex;
-  justify-content: center;
-  margin-top: 60px;
-`

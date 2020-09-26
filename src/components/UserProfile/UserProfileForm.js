@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 import { useHistory } from 'react-router-dom'
-import Header from '../Header/Header'
+import PageLayout from '../Design/CardWrapper/PageLayout'
+import CardWrapper from '../Design/CardWrapper/CardWrapper'
 
 export default function UserProfileForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
@@ -11,90 +12,108 @@ export default function UserProfileForm({ onSubmit }) {
   const disabledButton = !firstName && !lastName
 
   return (
-    <div>
-      <Header />
-      <FormStyled onSubmit={handleSubmit}>
-        <LabelWrapper>
-          <LabelStyled htmlFor="firstName">
-            Vorname
-            <input
-              autoFocus
-              name="firstName"
-              id="firstName"
-              type="text"
-              maxLength="40"
-              onChange={handleChange}
-              placeholder="Max"
-              required
-            />
-          </LabelStyled>
-          <LabelStyled htmlFor="lastName">
-            Nachname
-            <input
-              name="lastName"
-              id="lastName"
-              type="text"
-              maxLength="40"
-              onChange={handleChange}
-              placeholder="Mustermann"
-              required
-            />
-          </LabelStyled>
-        </LabelWrapper>
-        <LabelStyled htmlFor="company">
-          Unternehmen
-          <input
-            name="company"
-            id="company"
-            type="text"
-            placeholder="Universal GmbH"
-            required
-          />
-        </LabelStyled>
-        <LabelStyled htmlFor="phone">
-          Telefon
-          <input name="phone" type="tel" id="phone" required />
-        </LabelStyled>
-        <LabelStyled htmlFor="mail">
-          E-Mail
-          <input name="mail" id="mail" required />
-        </LabelStyled>
-        <LabelStyled htmlFor="url">
-          Website
-          <input
-            type="url"
-            name="url"
-            id="url"
-            placeholder="https://example.com"
-            size="30"
-            required
-          />
-        </LabelStyled>
-        <LabelStyled htmlFor="street">
-          Adresse
-          <input
-            name="street"
-            type="text"
-            id="street"
-            placeholder="Straße"
-            required
-          />
+    <PageLayout title="Nutzerprofil anlegen">
+      <CardWrapper>
+        <FormStyled onSubmit={handleSubmit}>
           <LabelWrapper>
-            <input name="zip" type="text" id="zip" placeholder="PLZ" required />
-            <input
-              name="city"
+            <LabelStyled htmlFor="firstName">
+              <LabelName>Vorname</LabelName>
+              <InputStyled
+                autoFocus
+                name="firstName"
+                id="firstName"
+                type="text"
+                maxLength="40"
+                onChange={handleChange}
+                placeholder="Max"
+                required
+              />
+            </LabelStyled>
+            <LabelStyled htmlFor="lastName">
+              <LabelName>Nachname</LabelName>
+              <InputStyled
+                name="lastName"
+                id="lastName"
+                type="text"
+                maxLength="40"
+                onChange={handleChange}
+                placeholder="Mustermann"
+                required
+              />
+            </LabelStyled>
+          </LabelWrapper>
+          <LabelStyled htmlFor="company">
+            <LabelName>Unternehmen</LabelName>
+            <InputStyled
+              name="company"
+              id="company"
               type="text"
-              id="city"
-              placeholder="Stadt"
+              placeholder="Universal GmbH"
               required
             />
-          </LabelWrapper>
-        </LabelStyled>
-        <button id="submit" disabled={disabledButton}>
-          Speichern
-        </button>
-      </FormStyled>
-    </div>
+          </LabelStyled>
+          <LabelStyled htmlFor="phone">
+            <LabelName>Telefon</LabelName>
+            <InputStyled
+              name="phone"
+              type="tel"
+              id="phone"
+              placeholder="0176-12345678"
+              required
+            />
+          </LabelStyled>
+          <LabelStyled htmlFor="mail">
+            <LabelName>E-Mail</LabelName>
+            <InputStyled
+              name="mail"
+              id="mail"
+              placeholder="hello@me.de"
+              required
+            />
+          </LabelStyled>
+          <LabelStyled htmlFor="url">
+            <LabelName>Website</LabelName>
+            <InputStyled
+              type="url"
+              name="url"
+              id="url"
+              placeholder="https://example.com"
+              size="30"
+              required
+            />
+          </LabelStyled>
+          <LabelStyled htmlFor="street">
+            <LabelName>Adresse</LabelName>
+            <InputStyled
+              name="street"
+              type="text"
+              id="street"
+              placeholder="Straße"
+              required
+            />
+            <LabelWrapper>
+              <InputStyled
+                name="zip"
+                type="text"
+                id="zip"
+                placeholder="PLZ"
+                required
+              />
+              <InputStyled
+                name="city"
+                type="text"
+                id="city"
+                placeholder="Stadt"
+                required
+              />
+            </LabelWrapper>
+          </LabelStyled>
+          <ButtonStyled id="submit" disabled={disabledButton}>
+            Speichern
+          </ButtonStyled>
+        </FormStyled>
+      </CardWrapper>
+    </PageLayout>
   )
 
   function handleChange(event) {
@@ -130,14 +149,15 @@ export default function UserProfileForm({ onSubmit }) {
     onSubmit(userItem)
     form.reset()
     history.push('/user-profile')
+    history.go(0)
   }
 }
 
 const FormStyled = styled.form`
   display: grid;
   gap: 10px;
-  padding: 20px;
-  margin-top: 60px;
+  margin: auto;
+  margin-top: 40px;
 `
 const LabelWrapper = styled.div`
   display: grid;
@@ -147,5 +167,33 @@ const LabelWrapper = styled.div`
 
 const LabelStyled = styled.label`
   display: grid;
-  gap: 10px;
+  color: var(--white);
+`
+
+const LabelName = styled.div`
+  padding-left: 20px;
+`
+const InputStyled = styled.input`
+  border-style: none;
+  padding-left: 20px;
+  height: 50px;
+  box-shadow: var(--shadow-grey);
+  border-radius: 30px;
+  outline: none;
+  margin-bottom: 15px;
+`
+
+const ButtonStyled = styled.button`
+  padding: 17px 48px;
+  font-size: 20px;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
+  border-style: none;
+  border-radius: 30px;
+  opacity: 1;
+  margin: 20px 0 30px 0;
+
+  &:disabled {
+    opacity: 0.5;
+  }
 `

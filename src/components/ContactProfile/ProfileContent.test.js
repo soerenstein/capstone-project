@@ -1,8 +1,9 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import { MemoryRouter, matchPath, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import ProfileContent from './ProfileContent'
+import ContactProfile from '../../pages/ContactProfile'
 
 describe('The profile', () => {
   it('renders correctly', ({
@@ -12,8 +13,7 @@ describe('The profile', () => {
     contactById,
   }) => {
     const profile = render(
-      <ProfileContent
-        useParams={useParams}
+      <ContactProfile
         contacts={contacts}
         onFavoriteClick={onFavoriteClick}
         favorites={favorites}
@@ -26,19 +26,19 @@ describe('The profile', () => {
 
 describe('The heading', () => {
   it('for contact information renders correctly', () => {
-    const { getByText } = render(<ContactProfile />)
+    const profile = render(<ContactProfile />)
     expect(getByText('Kontaktdaten')).toBeInTheDocument()
   })
   it('for adress renders correctly', () => {
-    const { getByText } = render(<ContactProfile />)
+    const profile = render(<ContactProfile />)
     expect(getByText('Adresse')).toBeInTheDocument()
   })
   it('for category renders correctly', () => {
-    const { getByText } = render(<ContactProfile />)
+    const profile = render(<ContactProfile />)
     expect(getByText('Kategorie')).toBeInTheDocument()
   })
   it('for notes renders correctly', () => {
-    const { getByText } = render(<ContactProfile />)
+    const profile = render(<ContactProfile />)
     expect(getByText('Notiz')).toBeInTheDocument()
   })
 })
