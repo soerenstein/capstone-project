@@ -142,7 +142,6 @@ export default function CreateContactForm({ onSubmit }) {
     }
     onSubmit(contactItem)
     form.reset()
-    form[0] && form[0].focus()
   }
 }
 
