@@ -30,6 +30,7 @@ export default function CreateContactForm({ onSubmit }) {
                 maxLength="40"
                 onChange={handleChange}
                 placeholder="Max"
+                required
               />
             </LabelStyled>
             <LabelStyled htmlFor="lastName">
@@ -42,6 +43,7 @@ export default function CreateContactForm({ onSubmit }) {
                 maxLength="40"
                 onChange={handleChange}
                 placeholder="Mustermann"
+                required
               />
             </LabelStyled>
           </LabelWrapper>
@@ -53,6 +55,7 @@ export default function CreateContactForm({ onSubmit }) {
               id="company"
               type="text"
               placeholder="Universal GmbH"
+              required
             />
           </LabelStyled>
           <LabelStyled htmlFor="phone">
