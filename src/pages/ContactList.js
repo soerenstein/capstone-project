@@ -12,16 +12,19 @@ export default function ContactList() {
   const [contacts] = useContacts()
   const history = useHistory()
 
-  console.log(contacts)
-
   return (
     <PageLayout title="Kontaktliste">
       <CardWrapper>
-        <CSVButton>
+        {contacts.length ? (
+          <CSVButton>
           <CSVLinkStyled data={contacts} filename={'my-contacts.csv'}>
             Kontakte exportieren (CSV)
           </CSVLinkStyled>
         </CSVButton>
+        ) : (
+         null
+        )}
+
         {contacts.length ? (
           <StyledList>
             {contacts.map((contact) => (
@@ -41,6 +44,7 @@ export default function ContactList() {
 }
 
 const StyledList = styled.ul`
+  margin: 40px 0;
   width: 100%;
   list-style: none;
   padding: 0;
@@ -60,6 +64,6 @@ const CSVButton = styled.button`
   border-style: none;
   border-radius: 30px;
   opacity: 1;
-  margin: 50px 0 30px 0;
+  margin: 50px 0 0 0;
   width: 100%;
 `
