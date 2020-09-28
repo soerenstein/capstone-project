@@ -181,6 +181,7 @@ const InputStyled = styled.input`
   border-radius: 30px;
   outline: none;
   margin-bottom: 15px;
+  width: 100%; 
 `
 
 const ButtonStyled = styled.button`

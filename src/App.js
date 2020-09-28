@@ -10,6 +10,7 @@ import FavContactList from './pages/FavContactList'
 import useContacts from './hooks/useContacts'
 import useUser from './hooks/useUser'
 import useFavorites from './hooks/useFavorites'
+import QrScanner from './components/QRScanner/QRScanner'
 
 export default function App() {
   const [contacts, addContact] = useContacts()
@@ -19,6 +20,9 @@ export default function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/scan">
+          <QrScanner onClick={addContact} />
+        </Route>
         <Route path="/user-profile">
           <UserProfile onSubmit={addUser} user={savedUser} />
         </Route>

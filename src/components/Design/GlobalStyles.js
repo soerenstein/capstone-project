@@ -3,13 +3,14 @@ import { createGlobalStyle } from 'styled-components/macro'
 export default createGlobalStyle`
 * {
     box-sizing: border-box;
-
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
 }
 
 /* montserrat-regular - latin */
 @font-face {
   font-family: 'Montserrat';
-  font-style: medium;
+  font-style: normal;
   font-weight: 400;
   src: url('../Design/Fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Montserrat Regular'), local('Montserrat-Regular'),
@@ -22,9 +23,12 @@ export default createGlobalStyle`
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
     line-height: 1.4;
     height: 100vh;
+}
+
+input {
+  font-size: inherit;
 }
 
 :root {

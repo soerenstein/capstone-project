@@ -35,5 +35,6 @@ const StyledNavLink = styled(NavLink)`
   background: var(--button-white);
   box-shadow: var(--shadow-grey);
   border-style: none;
+  color: black;
   border-radius: 30px;
 `
