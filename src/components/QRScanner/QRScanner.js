@@ -71,7 +71,10 @@ export default function QrScanner({ handleError, handleScan, onClick }) {
               onScan={handleScan}
               style={{ width: '100%' }}
             />
-            <HintStyled>Zur Nutzung auf dem iPhone oder iPad, nutzen Sie bitte den Safari Browser.</HintStyled>
+            <HintStyled>
+              Zur Nutzung auf dem iPhone oder iPad, nutzen Sie bitte den Safari
+              Browser.
+            </HintStyled>
             <ButtonStyled onClick={() => history.goBack()}>
               Abbrechen
             </ButtonStyled>
@@ -157,5 +160,4 @@ const ButtonStyled = styled.button`
 
 const StyledQR = styled(QrReader)`
   margin: 50px 0 30px 0;
-  border-radius: 20%;
 `
