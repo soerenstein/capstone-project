@@ -27,6 +27,10 @@ body {
     height: 100vh;
 }
 
+input {
+  font-size: inherit;
+}
+
 :root {
     --button-white: #ffffff 0% 0% no-repeat padding-box; 
     --white: #ffffff;
