@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
 import { v4 as uuidv4 } from 'uuid'
 import CardWrapper from '../Design/CardWrapper/CardWrapper'
@@ -7,12 +8,16 @@ import PageLayout from '../Design/CardWrapper/PageLayout'
 export default function CreateContactForm({ onSubmit }) {
   const [firstName, setFirstName] = useState(false)
   const [lastName, setLastName] = useState(false)
+  const history = useHistory()
 
   const disabledButton = !firstName && !lastName
 
   return (
     <PageLayout title="Kontakt anlegen">
       <CardWrapper>
+        <QRButtonStyled onClick={() => history.push(`/scan`)}>
+          QR-Code scannen
+        </QRButtonStyled>
         <FormStyled onSubmit={handleSubmit}>
           <LabelWrapper>
             <LabelStyled htmlFor="firstName">
@@ -137,7 +142,6 @@ export default function CreateContactForm({ onSubmit }) {
     }
     onSubmit(contactItem)
     form.reset()
-    form[0] && form[0].focus()
   }
 }
 
@@ -169,6 +173,7 @@ const InputStyled = styled.input`
   border-radius: 30px;
   outline: none;
   margin-bottom: 15px;
+  width: 100%; 
 `
 
 const ButtonStyled = styled.button`
@@ -184,4 +189,16 @@ const ButtonStyled = styled.button`
   &:disabled {
     opacity: 0.5;
   }
+`
+
+const QRButtonStyled = styled.button`
+  padding: 17px 48px;
+  font-size: 1.2em;
+  background: var(--button-white);
+  box-shadow: var(--shadow-grey);
+  border-style: none;
+  border-radius: 30px;
+  opacity: 1;
+  margin: 50px 0 0 0;
+  width: 100%;
 `
