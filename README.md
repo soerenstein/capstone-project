@@ -1,3 +1,7 @@
+Final project for the web development bootcamp @ neuefische.
+
+Test-URL (master): capstone-project-rust.vercel.app
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
