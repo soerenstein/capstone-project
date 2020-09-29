@@ -91,8 +91,8 @@ export default function QrScanner({ handleError, handleScan, onClick }) {
       phone: contactData.tel[0].value,
       mail: contactData.email[0].value,
       street: contactData.adr[0].value[2],
-      zip: contactData.adr[0].value[3],
-      city: contactData.adr[0].value[5],
+      zip: contactData.adr[0].value[5],
+      city: contactData.adr[0].value[3],
       id: uuidv4(),
     }
     onClick(contactItem)

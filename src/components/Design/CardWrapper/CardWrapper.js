@@ -12,7 +12,7 @@ export default function CardWrapper({ children }) {
 
 const StyledCardWrapper = styled.div`
   position: absolute;
-  height: 85%;
+  height: 85vh;
   width: 100%;
   bottom: 0;
   overflow: auto;

@@ -40,10 +40,9 @@ export default function NavButtons() {
 }
 
 const NavWrapper = styled.div`
-  position: absolute;
-  bottom: 50px;
+  position: fixed;
+  bottom: 5%; 
   display: flex;
-
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-evenly;

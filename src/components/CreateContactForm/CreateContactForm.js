@@ -69,12 +69,12 @@ export default function CreateContactForm({ onSubmit }) {
           </LabelStyled>
           <LabelStyled htmlFor="mail">
             <LabelName>E-Mail</LabelName>
-            <InputStyled name="mail" id="mail" placeholder="hello@me.de" />
+            <InputStyled name="mail" id="mail" type="email" placeholder="hello@me.de" />
           </LabelStyled>
           <LabelStyled htmlFor="street">
             <LabelName>Adresse</LabelName>
             <InputStyled
-              name="zip"
+              name="street"
               type="text"
               id="street"
               placeholder="Straße"

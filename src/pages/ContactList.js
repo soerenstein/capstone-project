@@ -17,13 +17,11 @@ export default function ContactList() {
       <CardWrapper>
         {contacts.length ? (
           <CSVButton>
-          <CSVLinkStyled data={contacts} filename={'my-contacts.csv'}>
-            Kontakte exportieren (CSV)
-          </CSVLinkStyled>
-        </CSVButton>
-        ) : (
-         null
-        )}
+            <CSVLinkStyled data={contacts} filename={'my-contacts.csv'}>
+              Kontakte exportieren (CSV)
+            </CSVLinkStyled>
+          </CSVButton>
+        ) : null}
 
         {contacts.length ? (
           <StyledList>
