@@ -5,6 +5,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400; 
+
 }
 
 /* montserrat-regular - latin */
@@ -25,6 +26,7 @@ body {
     margin: 0;
     line-height: 1.4;
     height: 100vh;
+    
 }
 
 input {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom/extend-expect'
-import NavButton from './NavButton'
+import NavButton from './NavButtons'
 
 describe('The listItem', () => {
   it('renders correctly', () => {
@@ -10,7 +10,7 @@ describe('The listItem', () => {
   })
 })
 
-describe('The NavButtons', () => {
+describe('The NavButton', () => {
   it('for profile renders correctly', () => {
     const { getByText } = render(<NavButton />)
     expect(getByText('Profil')).toBeInTheDocument()

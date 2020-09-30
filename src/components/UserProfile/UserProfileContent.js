@@ -51,7 +51,7 @@ const Wrapper = styled.div`
   position: relative;
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  overflow: auto; 
   padding: 20px 15px;
   background: var(--gradient-orange);
   border-radius: 40px 40px 0 0;
