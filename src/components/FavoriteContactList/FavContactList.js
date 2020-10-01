@@ -1,11 +1,11 @@
 import React from 'react'
-import ContactListItem from '../components/ContactListItem/ContactListItem'
+import ContactListItem from '../ContactListItem/ContactListItem'
 import { useHistory } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import ZeroFavorites from '../components/ContactList/ZeroFavorites'
-import useFavorites from '../hooks/useFavorites'
-import PageLayout from '../components/Design/CardWrapper/PageLayout'
-import CardWrapper from '../components/Design/CardWrapper/CardWrapper'
+import ZeroFavorites from '../ContactList/ZeroFavorites'
+import useFavorites from '../../hooks/useFavorites'
+import PageLayout from '../Design/CardWrapper/PageLayout'
+import CardWrapper from '../Design/CardWrapper/CardWrapper'
 
 export default function FavContactList() {
   const [favorites] = useFavorites()

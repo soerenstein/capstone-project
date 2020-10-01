@@ -1,7 +1,7 @@
 import React from 'react'
-import UserProfileContent from '../components/UserProfile/UserProfileContent'
-import UserProfileForm from '../components/UserProfile/UserProfileForm'
-import useUser from '../hooks/useUser'
+import UserProfileContent from './UserProfileContent'
+import UserProfileForm from './UserProfileForm'
+import useUser from '../../hooks/useUser'
 
 export default function UserProfile({ user, onSubmit }) {
   const [savedUser] = useUser()
