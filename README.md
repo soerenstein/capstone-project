@@ -1,3 +1,9 @@
+# Exhibite 
+
+Networking made simple - Exhibite liefert die digitale Lösung, Visitenkarten zu erstellen und kontaktlos per QR-Code zu teilen. Neu erfasste Kontakte können aus der App exportiert und in ein beliebiges Netzwerk übernommen werden. Verlorengegangene Visitenkarten und lästiges Abtippen gehören damit der Vergangenheit an.
+
+![Screenshot](src/components/Design/img/exhibite_soeren_stein-min.png)
+
 Final project for the web development bootcamp @ neuefische.
 
 Test-URL (master): [capstone-project-rust.vercel.app](https://capstone-project-rust.vercel.app/)

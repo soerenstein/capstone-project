@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Navigation renders correctly 1`] = `
+<div
+  className="NavButtons__NavWrapper-be11z7-0 bkLDAC"
+>
+  <a
+    aria-current={null}
+    href="/user-profile"
+    onClick={[Function]}
+  >
+    <div
+      className="NavButtons__NavButtonWrapper-be11z7-1 kvcfxI"
+    >
+      <svg>
+        userHomepage.svg
+      </svg>
+      <h2
+        className="NavButtons__H2Styled-be11z7-2 hjdpHL"
+      >
+        Profil
+      </h2>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    href="/create"
+    onClick={[Function]}
+  >
+    <div
+      className="NavButtons__NavButtonWrapper-be11z7-1 kvcfxI"
+    >
+      <svg>
+        userPlusHomepage.svg
+      </svg>
+      <h2
+        className="NavButtons__H2Styled-be11z7-2 hjdpHL"
+      >
+        Kontakt hinzufügen
+      </h2>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    href="/list"
+    onClick={[Function]}
+  >
+    <div
+      className="NavButtons__NavButtonWrapper-be11z7-1 kvcfxI"
+    >
+      <svg>
+        userListHomepage.svg
+      </svg>
+      <h2
+        className="NavButtons__H2Styled-be11z7-2 hjdpHL"
+      >
+        Kontaktliste
+      </h2>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    href="/favorites"
+    onClick={[Function]}
+  >
+    <div
+      className="NavButtons__NavButtonWrapper-be11z7-1 kvcfxI"
+    >
+      <svg>
+        FavoriteUserHomepage.svg
+      </svg>
+      <h2
+        className="NavButtons__H2Styled-be11z7-2 hjdpHL"
+      >
+        Favoriten
+      </h2>
+    </div>
+  </a>
+</div>
+`;

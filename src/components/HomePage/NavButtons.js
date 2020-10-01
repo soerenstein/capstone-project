@@ -10,30 +10,30 @@ export default function NavButtons() {
   return (
     <>
       <NavWrapper>
-        <NavLink to="/user-profile">
-          <NavButtonWrapper>
-            <UserProfile />
-            <H2Styled>Profil</H2Styled>
-          </NavButtonWrapper>
-        </NavLink>
-        <NavLink to="/create">
-          <NavButtonWrapper>
-            <AddUser />
-            <H2Styled>Kontakt hinzufügen</H2Styled>
-          </NavButtonWrapper>
-        </NavLink>
-        <NavLink to="/list">
-          <NavButtonWrapper>
-            <UserList />
-            <H2Styled>Kontaktliste</H2Styled>
-          </NavButtonWrapper>
-        </NavLink>
-        <NavLink to="/favorites">
-          <NavButtonWrapper>
-            <FavoriteUser />
-            <H2Styled>Favoriten</H2Styled>
-          </NavButtonWrapper>
-        </NavLink>
+          <NavLink to="/user-profile">
+            <NavButtonWrapper>
+              <UserProfile />
+              <H2Styled>Profil</H2Styled>
+            </NavButtonWrapper>
+          </NavLink>
+          <NavLink to="/create">
+            <NavButtonWrapper>
+              <AddUser />
+              <H2Styled>Kontakt hinzufügen</H2Styled>
+            </NavButtonWrapper>
+          </NavLink>
+          <NavLink to="/list">
+            <NavButtonWrapper>
+              <UserList />
+              <H2Styled>Kontaktliste</H2Styled>
+            </NavButtonWrapper>
+          </NavLink>
+          <NavLink to="/favorites">
+            <NavButtonWrapper>
+              <FavoriteUser />
+              <H2Styled>Favoriten</H2Styled>
+            </NavButtonWrapper>
+          </NavLink>
       </NavWrapper>
     </>
   )
@@ -41,9 +41,10 @@ export default function NavButtons() {
 
 const NavWrapper = styled.div`
   position: fixed;
-  bottom: 5%; 
+  bottom: 5%;
+  height: 50vh; 
   display: flex;
-  width: 100%;
+  width: 100vw;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 20px;

@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import ContactListItem from '../components/ContactListItem/ContactListItem'
+import ContactListItem from '../ContactListItem/ContactListItem'
 import { useHistory } from 'react-router-dom'
-import ZeroContacts from '../components/ContactList/ZeroContacts'
-import useContacts from '../hooks/useContacts'
-import CardWrapper from '../components/Design/CardWrapper/CardWrapper'
-import PageLayout from '../components/Design/CardWrapper/PageLayout'
+import ZeroContacts from './ZeroContacts'
+import useContacts from '../../hooks/useContacts'
+import CardWrapper from '../Design/CardWrapper/CardWrapper'
+import PageLayout from '../Design/CardWrapper/PageLayout'
 import { CSVLink } from 'react-csv'
 
 export default function ContactList() {
